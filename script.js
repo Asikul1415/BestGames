@@ -131,3 +131,73 @@ document.addEventListener('DOMContentLoaded', function() {
     // Инициализируем слайдер при загрузке страницы
     new Slider();
 });
+
+
+// Добавь в конец твоего script.js этот код:
+
+// ==================== ПЕРЕКЛЮЧЕНИЕ ТЕМ ====================
+function initThemeSwitcher() {
+    const themeButtons = document.querySelectorAll('.theme-btn');
+    const switcherButtons = document.querySelectorAll('.theme-switcher-btn');
+    
+    // Переключение через кнопки в профиле
+    themeButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const theme = this.getAttribute('data-theme') || this.textContent.trim();
+            switchTheme(theme);
+            
+            // Сохраняем в localStorage
+            localStorage.setItem('theme', theme);
+        });
+    });
+    
+    // Переключение через блок в светлой теме
+    switcherButtons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            if (this.classList.contains('dark')) {
+                e.preventDefault();
+                switchTheme('dark');
+                localStorage.setItem('theme', 'dark');
+                // Перенаправляем на темную тему через 500мс
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 500);
+            }
+        });
+    });
+    
+    // Восстановление темы при загрузке
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        switchTheme(savedTheme);
+    }
+}
+
+// Функция переключения темы
+function switchTheme(theme) {
+    const body = document.body;
+    const themeButtons = document.querySelectorAll('.theme-btn');
+    
+    // Убираем активный класс у всех кнопок
+    themeButtons.forEach(btn => {
+        btn.classList.remove('active');
+        // Добавляем active к соответствующей кнопке
+        const btnTheme = btn.getAttribute('data-theme') || btn.textContent.trim();
+        if (btnTheme.toLowerCase().includes(theme.toLowerCase())) {
+            btn.classList.add('active');
+        }
+    });
+    
+    // Меняем тему на странице (если это не отдельная страница light)
+    if (theme === 'light' && !body.classList.contains('light-theme')) {
+        // Если нужно переключить на лету, можно добавить класс
+        // body.classList.add('light-theme');
+    } else if (theme === 'dark' && body.classList.contains('light-theme')) {
+        // body.classList.remove('light-theme');
+    }
+}
+
+// В основной инициализации добавь:
+document.addEventListener('DOMContentLoaded', function() {
+    initThemeSwitcher();
+});

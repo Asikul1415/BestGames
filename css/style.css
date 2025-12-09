@@ -954,3 +954,260 @@ h2 {
         width: 100%;
     }
 }
+
+
+/* ==================== СВЕТЛАЯ ТЕМА ==================== */
+/* ==================== СВЕТЛАЯ ТЕМА (ЗАМЕТНЫЕ ИЗМЕНЕНИЯ) ==================== */
+
+/* ==================== СВЕТЛАЯ ТЕМА - ПРОСТО И ЗАМЕТНО ==================== */
+
+/* Когда у HTML есть класс light-theme */
+html.light-theme {
+    /* ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ ДЛЯ СВЕТЛОЙ ТЕМЫ */
+    --dark: #ffffff;
+    --gray: #f5f5f5;
+    --light: #333333;
+    --accent: #007bff; /* СИНИЙ вместо золотого */
+    --accent-dark: #0056b3;
+}
+
+/* Теперь применяем переменные КО ВСЕМУ */
+html.light-theme body {
+    background-color: var(--dark) !important;
+    color: var(--light) !important;
+}
+
+/* 1. ШАПКА - ПОЛНОСТЬЮ БЕЛАЯ С СИНИМИ АКЦЕНТАМИ */
+html.light-theme .header {
+    background: white !important;
+    border-bottom: 3px solid var(--accent) !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+}
+
+html.light-theme .logo {
+    color: var(--accent) !important;
+    font-size: 2.2rem !important;
+}
+
+html.light-theme .nav a {
+    color: var(--light) !important;
+    font-weight: 600 !important;
+}
+
+html.light-theme .btn-login {
+    border: 2px solid var(--accent) !important;
+    color: var(--accent) !important;
+    background: transparent !important;
+}
+
+html.light-theme .btn-catalog {
+    background: var(--accent) !important;
+    color: white !important;
+    font-weight: 600 !important;
+    border: none !important;
+}
+
+/* 2. ГЕРОЙ БЛОК - СВЕТЛЫЙ ФОН, ТЕМНЫЙ ТЕКСТ */
+html.light-theme .hero {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef) !important;
+}
+
+html.light-theme .hero h1 {
+    color: #222 !important;
+}
+
+html.light-theme .hero .highlight {
+    color: var(--accent) !important;
+    background: none !important;
+    -webkit-text-fill-color: var(--accent) !important;
+}
+
+html.light-theme .hero p {
+    color: #666 !important;
+}
+
+html.light-theme .btn-hero {
+    background: var(--accent) !important;
+    color: white !important;
+    border-radius: 30px !important;
+    font-weight: 600 !important;
+}
+
+/* 3. СЛАЙДЕР - БЕЛЫЙ ФОН ВМЕСТО ТЕМНОГО */
+html.light-theme .slider-section {
+    background: var(--gray) !important;
+}
+
+html.light-theme .slider {
+    border: 3px solid white !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+}
+
+html.light-theme .slider-prev,
+html.light-theme .slider-next {
+    background: rgba(0, 123, 255, 0.2) !important;
+    color: #333 !important;
+}
+
+/* 4. КАРТОЧКИ ИГР - БЕЛЫЕ КАРТОЧКИ С ТЕНЬЮ */
+html.light-theme .game-card {
+    background: white !important;
+    border: 1px solid #ddd !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05) !important;
+    border-radius: 10px !important;
+}
+
+html.light-theme .game-info h3 {
+    color: #222 !important;
+}
+
+html.light-theme .genre {
+    color: #666 !important;
+    background: #f8f9fa !important;
+    padding: 3px 10px !important;
+    border-radius: 15px !important;
+}
+
+html.light-theme .price {
+    color: var(--accent) !important;
+    font-weight: 700 !important;
+}
+
+html.light-theme .price.free {
+    color: #28a745 !important;
+}
+
+html.light-theme .rating {
+    color: #ffc107 !important; /* Желтые звезды */
+}
+
+/* 5. ПРЕИМУЩЕСТВА - СВЕТЛЫЕ КАРТОЧКИ */
+html.light-theme .features {
+    background: var(--gray) !important;
+}
+
+html.light-theme .feature {
+    background: white !important;
+    border: 1px solid #eee !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03) !important;
+}
+
+html.light-theme .feature h3 {
+    color: #222 !important;
+}
+
+html.light-theme .feature p {
+    color: #666 !important;
+}
+
+html.light-theme .feature-icon {
+    color: var(--accent) !important;
+    background: rgba(0, 123, 255, 0.1) !important;
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto 1rem !important;
+}
+
+/* 6. ПОДВАЛ - ТЕМНЫЙ ДЛЯ КОНТРАСТА */
+html.light-theme .footer {
+    background: #343a40 !important; /* Темно-серый */
+    color: white !important;
+}
+
+html.light-theme .footer-logo {
+    color: white !important;
+}
+
+html.light-theme .footer-links a {
+    color: #ccc !important;
+}
+
+html.light-theme .footer-links a:hover {
+    color: white !important;
+}
+
+html.light-theme .footer-contact p {
+    color: #aaa !important;
+}
+
+html.light-theme .footer-bottom {
+    border-top-color: #495057 !important;
+    color: #999 !important;
+}
+
+/* 7. ПОИСК - БЕЛЫЙ ИНПУТ */
+html.light-theme .search-input {
+    background: white !important;
+    border: 2px solid #ddd !important;
+    color: #333 !important;
+}
+
+html.light-theme .search-btn {
+    background: var(--accent) !important;
+    color: white !important;
+    border: none !important;
+}
+
+/* 8. БЛОК ПЕРЕКЛЮЧЕНИЯ ТЕМ (САМАЯ ЗАМЕТНАЯ ЧАСТЬ) */
+html.light-theme .theme-switcher {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%) !important;
+    padding: 3rem 0 !important;
+    color: white !important;
+    margin-top: 3rem !important;
+}
+
+html.light-theme .theme-switcher p {
+    color: white !important;
+    font-size: 1.3rem !important;
+    margin-bottom: 1.5rem !important;
+    font-weight: 600 !important;
+}
+
+html.light-theme .theme-switcher-buttons {
+    display: flex !important;
+    gap: 1rem !important;
+    justify-content: center !important;
+}
+
+html.light-theme .theme-switcher-btn {
+    padding: 1rem 2rem !important;
+    border-radius: 50px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    transition: all 0.3s !important;
+}
+
+html.light-theme .theme-switcher-btn.dark {
+    background: rgba(0, 0, 0, 0.3) !important;
+    color: white !important;
+    border: 2px solid white !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+html.light-theme .theme-switcher-btn.light {
+    background: white !important;
+    color: #007bff !important;
+    border: 2px solid white !important;
+}
+
+html.light-theme .theme-switcher-btn:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+}
+
+/* 9. МЕНЮ-БУРГЕР В СВЕТЛОЙ ТЕМЕ */
+html.light-theme .menu-btn span {
+    background: #333 !important;
+}
+
+/* 10. ГЛАВНОЕ - СДЕЛАТЬ ВСЕ !important чтобы ПЕРЕКРЫТЬ СТАРЫЕ СТИЛИ */
+html.light-theme * {
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s !important;
+}

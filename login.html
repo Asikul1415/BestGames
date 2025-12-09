@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestGames | Вход</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="auth-page">
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="/" class="logo">BG</a>
+                <nav class="nav">
+                    <a href="catalog.html" class="btn-catalog">Каталог</a>
+                </nav>
+                <button class="menu-btn">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="auth-container">
+                <h1>Вход в <span class="highlight">BestGames</span></h1>
+                <p class="subtitle">Войдите в свой аккаунт, чтобы продолжить</p>
+
+                <form class="auth-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required placeholder="example@mail.ru">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Пароль</label>
+                        <input type="password" id="password" name="password" required placeholder="••••••••">
+                    </div>
+                    <button type="submit" class="btn-submit">Войти</button>
+                    <div class="form-links">
+                        <a href="register.html" class="link">Зарегестрироваться</a>
+                        <a href="#" class="link">Забыли пароль?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">BestGames</div>
+                <div class="footer-links">
+                    <a href="catalog.html">Каталог</a>
+                    <a href="login.html">Войти</a>
+                    <a href="register.html">Регистрация</a>
+                    <a href="profile.html">Кабинет</a>
+                </div>
+                <div class="footer-contact">
+                    <p>8-800-999-55-99</p>
+                    <p>best@games.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 BestGames</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

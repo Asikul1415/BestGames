@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestGames | Админ-панель</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="/" class="logo">BG</a>
+                <nav class="nav">
+                    <a href="/" class="nav-link">На сайт</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="admin-header">
+                <h1>Административная <span class="highlight">панель</span></h1>
+                <p>Добавление новой игры в каталог</p>
+            </div>
+
+            <form class="admin-form" action="#" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="game_name">Название игры *</label>
+                        <input type="text" id="game_name" name="game_name" required placeholder="Например: Cyberpunk 2077">
+                    </div>
+                    <div class="form-group">
+                        <label for="game_genre">Жанр *</label>
+                        <select id="game_genre" name="game_genre" required>
+                            <option value="">Выберите жанр</option>
+                            <option value="shooter">Шутер</option>
+                            <option value="rpg">RPG</option>
+                            <option value="strategy">Стратегия</option>
+                            <option value="racing">Гонки</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="game_developer">Компания-разработчик *</label>
+                    <input type="text" id="game_developer" name="game_developer" required placeholder="Например: CD Projekt Red">
+                </div>
+                <div class="form-group">
+                    <label for="game_image">Ссылка на изображение *</label>
+                    <input type="url" id="game_image" name="game_image" required placeholder="https://example.com/image.jpg">
+                </div>
+                <div class="form-group">
+                    <label for="game_description">Описание игры *</label>
+                    <textarea id="game_description" name="game_description" rows="4" required placeholder="Опишите игру..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="game_price">Стоимость (в рублях) *</label>
+                    <input type="number" id="game_price" name="game_price" required placeholder="2999" min="0">
+                </div>
+                <button type="submit" class="btn-submit btn-admin">
+                    <i class="fas fa-plus"></i> Добавить игру
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">BestGames</div>
+                <div class="footer-links">
+                    <a href="catalog.html">Каталог</a>
+                    <a href="login.html">Войти</a>
+                    <a href="register.html">Регистрация</a>
+                    <a href="profile.html">Кабинет</a>
+                </div>
+                <div class="footer-contact">
+                    <p>8-800-999-55-99</p>
+                    <p>best@games.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 BestGames</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

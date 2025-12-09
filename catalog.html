@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestGames | Каталог игр</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="/" class="logo">BG</a>
+                <nav class="nav">
+                    <a href="profile.html" class="btn-login">Кабинет</a>
+                    <a href="catalog.html" class="btn-catalog">Каталог</a>
+                </nav>
+                <button class="menu-btn">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="catalog-header">
+                <h1>Каталог <span class="highlight">игр</span></h1>
+                <p>Выбирайте из тысяч игр по лучшим ценам</p>
+                <div class="catalog-actions">
+                    <button class="filter-toggle" id="filterToggle">
+                        <i class="fas fa-filter"></i> Фильтры
+                    </button>
+                    <div class="search-box">
+                        <input type="text" placeholder="Поиск по играм..." class="search-input">
+                        <button class="search-btn">Найти</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="catalog-layout">
+                <aside class="filters-sidebar" id="filtersSidebar">
+                    <h3>Фильтр по жанрам</h3>
+                    <div class="filter-group">
+                        <label class="filter-checkbox">
+                            <input type="checkbox" checked> Шутер
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox"> RPG
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox"> Стратегия
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox"> Гонки
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox"> Симулятор
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox"> Приключение
+                        </label>
+                    </div>
+                    <button class="btn-apply">Применить</button>
+                </aside>
+
+                <section class="catalog-grid">
+                    <div class="game-card">
+                        <img src="/images/cs2.jpeg" alt="CS2">
+                        <div class="game-info">
+                            <h3>CS2</h3>
+                            <p class="genre">Шутер</p>
+                            <div class="game-footer">
+                                <span class="price free">Бесплатно</span>
+                                <span class="rating">★★★★☆</span>
+                            </div>
+                            <a href="#" class="btn-game">Подробнее</a>
+                        </div>
+                    </div>
+                    <!--Карточки как в index.html-->
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">BestGames</div>
+                <div class="footer-links">
+                    <a href="catalog.html">Каталог</a>
+                    <a href="login.html">Войти</a>
+                    <a href="register.html">Регистрация</a>
+                    <a href="profile.html">Кабинет</a>
+                </div>
+                <div class="footer-contact">
+                    <p>8-800-999-55-99</p>
+                    <p>best@games.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 BestGames</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

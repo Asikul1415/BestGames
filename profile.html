@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestGames | Личный кабинет</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="/" class="logo">BG</a>
+                <nav class="nav">
+                    <a href="catalog.html" class="btn-catalog">Каталог</a>
+                    <a href="/" class="nav-link">Выйти</a>
+                </nav>
+                <button class="menu-btn">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="profile-header">
+                <h1>Личный <span class="highlight">кабинет</span></h1>
+                <p>Управляйте своим профилем и покупками</p>
+            </div>
+
+            <div class="profile-content">
+                <section class="profile-info">
+                    <h2><i class="fas fa-user"></i> Информация о пользователе</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">E-mail:</span>
+                            <span class="info-value">ivanov@mail.ru</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Фамилия:</span>
+                            <span class="info-value">Иванов</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Имя:</span>
+                            <span class="info-value">Иван</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Дата рождения:</span>
+                            <span class="info-value">15.08.1995</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Телефон:</span>
+                            <span class="info-value">+7 (999) 123-45-67</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="purchase-history">
+                    <h2><i class="fas fa-history"></i> История покупок</h2>
+                    <div class="history-table">
+                        <div class="table-row header">
+                            <div class="table-cell">Дата</div>
+                            <div class="table-cell">Игра / Предмет</div>
+                            <div class="table-cell">Стоимость</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell">12.03.2025</div>
+                            <div class="table-cell">Clair Obscur: Expedition 33</div>
+                            <div class="table-cell">1 949 ₽</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell">05.03.2025</div>
+                            <div class="table-cell">ARC Raiders</div>
+                            <div class="table-cell">2 999 ₽</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="profile-settings">
+                    <h2><i class="fas fa-cog"></i> Настройки профиля</h2>
+                    <div class="settings-grid">
+                        <button class="btn-settings">
+                            <i class="fas fa-key"></i> Сменить пароль
+                        </button>
+                        <div class="theme-toggle">
+                            <span>Тема:</span>
+                            <div class="toggle-buttons">
+                                <button class="theme-btn active">Тёмная</button>
+                                <button class="theme-btn">Светлая</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">BestGames</div>
+                <div class="footer-links">
+                    <a href="catalog.html">Каталог</a>
+                    <a href="login.html">Войти</a>
+                    <a href="register.html">Регистрация</a>
+                    <a href="profile.html">Кабинет</a>
+                </div>
+                <div class="footer-contact">
+                    <p>8-800-999-55-99</p>
+                    <p>best@games.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 BestGames</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

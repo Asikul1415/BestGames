@@ -1,22 +1,18 @@
-/* style.css - Компактная версия */
-
-/* Сброс */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Переменные цвета */
+
 :root {
     --dark: #111;
     --gray: #222;
     --light: #f5f5f5;
-    --accent: #FFD700; /* Желтый акцент */
+    --accent: #FFD700; 
     --accent-dark: #FFA500;
 }
 
-/* Базовые стили */
 body {
     font-family: 'Inter', sans-serif;
     background: var(--dark);
@@ -30,7 +26,6 @@ body {
     padding: 0 20px;
 }
 
-/* Типография */
 h1, h2, h3 {
     font-weight: 600;
     margin-bottom: 1rem;
@@ -49,7 +44,6 @@ h2 {
     color: var(--accent);
 }
 
-/* Шапка */
 .header {
     background: var(--gray);
     padding: 1rem 0;
@@ -118,7 +112,6 @@ h2 {
     background: var(--light);
 }
 
-/* Герой */
 .hero {
     padding: 4rem 0;
     text-align: center;
@@ -237,7 +230,6 @@ h2 {
     color: var(--dark);
 }
 
-/* Кнопки навигации */
 .slider-prev,
 .slider-next {
     position: absolute;
@@ -270,7 +262,6 @@ h2 {
     right: 20px;
 }
 
-/* Индикаторы */
 .slider-dots {
     position: absolute;
     bottom: 20px;
@@ -297,7 +288,6 @@ h2 {
     background: rgba(255, 215, 0, 0.7);
 }
 
-/* Адаптивность слайдера */
 @media (max-width: 768px) {
     .slider {
         border-radius: 8px;
@@ -349,7 +339,6 @@ h2 {
     }
 }
 
-/* Поиск */
 .search {
     padding: 2rem 0;
     background: var(--gray);
@@ -382,7 +371,6 @@ h2 {
     cursor: pointer;
 }
 
-/* Игры */
 .games {
     padding: 4rem 0;
 }
@@ -444,7 +432,6 @@ h2 {
     color: var(--accent);
 }
 
-/* Преимущества */
 .features {
     padding: 4rem 0;
     background: var(--gray);
@@ -478,17 +465,16 @@ h2 {
     font-size: 0.9rem;
 }
 
-/* Футер */
 .footer {
     background: var(--dark);
     padding: 3rem 0 1rem;
 }
 
 .footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 14rem;
+    margin-bottom: 0.5rem;
 }
 
 .footer-logo {
@@ -500,8 +486,8 @@ h2 {
 
 .footer-links {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    flex-direction: row;
+    gap: 3rem;
 }
 
 .footer-links a {
@@ -526,7 +512,6 @@ h2 {
     color: #777;
 }
 
-/* Адаптивность */
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem;

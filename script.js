@@ -201,3 +201,128 @@ function switchTheme(theme) {
 document.addEventListener('DOMContentLoaded', function() {
     initThemeSwitcher();
 });
+
+
+// Фильтр по жанрам в каталоге
+const catalog = document.getElementsByClassName('catalog-header')[0];
+const catalogFilters = getFilters();
+const gameCards = getGameCards();
+
+if(catalog){
+    const btnApply = document.getElementsByClassName('btn-apply')[0];
+    btnApply.addEventListener('click', function() {
+        const selectedFilters = getSelectedFilters(); 
+        showAllGameCards();
+        hideAllGameCards();
+        showGameCardsByGenres(selectedFilters);      
+
+    })
+}
+
+if(catalog){
+    catalogFilters.forEach(filter => {
+        filter.addEventListener('change', function() {
+            if(filter.getAttribute('selected') === 'true'){
+                filter.removeAttribute('selected');
+            }
+            else{
+                filter.setAttribute('selected', 'true');
+            }
+        });
+    });
+}
+
+function getGameCards() {
+    if(catalog){
+        const gameCards = document.getElementsByClassName('game-card');
+        return Array.from(gameCards);
+    }
+    return null;
+}
+
+function showAllGameCards() {
+
+}
+
+function hideAllGameCards() {
+    if(catalog){
+        gameCards.map(card => {
+            card.classList.add('game-card_hidden');
+        })
+    }
+}
+
+function showGameCardsByGenres(genres){
+    console.log(genres);
+    if(genres.length === 0){
+        gameCards.forEach(card => {
+            card.classList.remove('game-card_hidden');
+        })
+    }
+
+    gameCards
+    .forEach(card => {
+        const gameGenres = card.getElementsByClassName('genre')[0];
+        
+        isFitting = true;
+        genres.forEach(genre => {
+            if(gameGenres.textContent.includes(genre) === false){
+                console.log(card, gameGenres, genre)
+                isFitting = false;
+            }
+        })
+
+        if(isFitting){
+            card.classList.remove('game-card_hidden');
+        }
+    });
+}
+
+function getFilters() {
+    if(catalog){
+        return Array.from(document.getElementsByClassName('filter-checkbox'));
+    }
+    return null;
+}
+
+function getSelectedFilters() {
+    if(catalogFilters){
+        const selectedFilters = catalogFilters
+        .map(filter => {
+            if(filter.getAttribute('selected') === 'true'){
+                return filter.textContent.trim();
+            }
+            return null;
+        })
+        .filter(function(filter){
+            return filter !== null
+        });
+
+        return selectedFilters;
+    }
+    return null;
+}
+
+
+//ПОИСК
+const searchField = document.getElementsByClassName('search-input')[0] ?? null;
+const searchButton = document.getElementsByClassName('search-btn')[0] ?? null;
+
+if(searchField && searchButton){
+    searchButton.addEventListener('click', function() {
+        if(searchField.value !== ""){
+            search(searchField.value);    
+        }
+    });
+}
+
+function search(query) {
+    if(gameCards){
+        hideAllGameCards();
+        gameCards.forEach(card => {
+            if(card.textContent.includes(query)){
+                card.classList.remove('game-card_hidden');
+            }
+        })
+    }
+}

@@ -3,91 +3,101 @@ const catalogGameCardsData = [
         id: 0,
         title: "CS2",
         genre: "Шутер",
+        developer: "Valve",
         price: "Бесплатно",
         rating: "★★★★☆",
         image: "images/cs2.jpg",
-        isFree: true
+        isFree: true,
     },
     {
         id: 1,
         title: "ARC Raiders",
         genre: "Шутер",
+        developer: "Embark Studios",
         price: "2 999 ₽",
         rating: "★★★☆☆",
         image: "images/arc raiders.webp",
-        isFree: false
+        isFree: false,
     },
     {
         id: 2,
         title: "Battlefield 6",
         genre: "Шутер",
+        developer: "EA DICE",
         price: "6 999,00 ₽",
         rating: "★★★★★",
         image: "images/battlefield6.jpeg",
-        isFree: false
+        isFree: false,
     },
     {
         id: 3,
         title: "Call of Duty: Black Ops 6",
         genre: "Шутер",
+        developer: "Treyarch",
         price: "6 999,00 ₽",
         rating: "★★★★★",
         image: "images/call of duty black ops 6.jpeg",
-        isFree: false
+        isFree: false,
     },
     {
         id: 4,
         title: "Forza Horizon 5: Standard Edition",
         genre: "Гонки, Приключение",
+        developer: "Playground Games",
         price: "6 999,00 ₽",
         rating: "★★★★★",
         image: "images/fh 5.jpeg",
-        isFree: false
+        isFree: false,
     },
     {
         id: 5,
         title: "BeamNG Drive",
         genre: "Гонки, Симулятор",
+        developer: "BeamNG GmbH",
         price: "6 999,00 ₽",
         rating: "★★★★★",
         image: "images/BeamNG drive.jpeg",
-        isFree: false
+        isFree: false,
     },
     {
         id: 6,
         title: "Sid Meier's Civilization VII",
         genre: "Стратегия, Симулятор",
+        developer: "Firaxis Games",
         price: "5 600 ₽",
         rating: "★★★★★",
         image: "images/civilization 7.jpeg",
-        isFree: false
+        isFree: false,
     },
     {
         id: 7,
         title: "Hearts of Iron IV",
         genre: "Стратегия, Симулятор",
+        developer: "Paradox Development Studio",
         price: "639 ₽",
         rating: "★★★★★",
         image: "images/hoi4.jpeg",
-        isFree: false
+        isFree: false,
     },
     {
         id: 8,
         title: "Europe Universalis V",
         genre: "Стратегия, Симулятор",
+        developer: "Paradox Development Studio",
         price: "5 600 ₽",
         rating: "★★★★★",
         image: "images/Europe Universalis V.jpeg",
-        isFree: false
+        isFree: false,
     },
     {
         id: 9,
         title: "The Elder Scrolls V: Skyrim Special Edition",
         genre: "RPG, Симулятор, Приключение",
+        developer: "Bethesda Game Studios",
         price: "3 200 ₽",
         rating: "★★★★★",
         image: "images/skyrim se.jpeg",
-        isFree: false
+        isFree: false,
     }
 ];
 
@@ -108,6 +118,7 @@ function renderGameCards(gameCards) {
                 <div class="game-info">
                     <h3>${game.title}</h3>
                     <p class="genre">${game.genre}</p>
+                    <p class="developer">${game.developer}</p>
                     <div class="game-footer">
                         <span class="${game.isFree ? 'price free' : 'price'}">${gamePrice}</span>
                         <span class="rating">${game.rating}</span>
@@ -260,8 +271,6 @@ if(slider){
 
 
 
-// Добавь в конец твоего script.js этот код:
-
 // ==================== ПЕРЕКЛЮЧЕНИЕ ТЕМ ====================
 function initThemeSwitcher() {
     const themeButtons = document.querySelectorAll('.theme-btn');
@@ -324,7 +333,7 @@ function switchTheme(theme) {
     }
 }
 
-// В основной инициализации добавь:
+
 document.addEventListener('DOMContentLoaded', function() {
     initThemeSwitcher();
 });

@@ -464,3 +464,65 @@ function search(query) {
         showAllGameCards();
     }
 }
+
+//Подсказки при поиске
+const searchSuggestions = document.getElementsByClassName('search-suggestions')[0];
+if(searchField && searchButton){
+    searchField.addEventListener('input', function() {
+        suggestQueryFittingGames();
+    });
+    
+    searchField.addEventListener('focus', function() {
+        searchSuggestions.classList.remove('search-suggestions_hidden');
+        suggestQueryFittingGames();
+    });
+
+    searchField.addEventListener('blur', function() {
+        setTimeout(() => {
+            searchSuggestions.classList.add('search-suggestions_hidden');
+        }, 100)
+    });
+}
+
+function suggestQueryFittingGames() {
+    const query = searchField.value;
+    let suggestions = [];
+    catalogGameCardsData.forEach(game => {
+        if (suggestions.length >= 3) {
+            return;
+        }
+
+        const gameTitle = game.title.toLocaleLowerCase();
+        if (gameTitle.includes(query.toLowerCase())) {
+            suggestions.push([
+                {
+                    'title': game.title,
+                    'image': game.image,
+                }
+            ]);
+        }
+    });
+    renderSearchSuggestions(suggestions);
+}
+
+function renderSearchSuggestions(suggestions) {
+    searchSuggestions.innerHTML = "";
+    suggestions.forEach(searchSuggestion => {
+        searchSuggestion = searchSuggestion[0];
+        const suggestion = document.createElement('div');
+        suggestion.className = "search-suggestion";
+
+        suggestion.innerHTML = `
+            <img class="search-suggestion__game-image" src="${searchSuggestion.image}" alt="${searchSuggestion.title}">
+            <h3>${searchSuggestion.title}</h3>
+        `
+
+        suggestion.addEventListener('click', function() {
+            searchField.value = searchSuggestion.title;
+            searchSuggestions.classList.add('search-suggestions_hidden');
+            searchButton.click();
+        });
+
+        searchSuggestions.appendChild(suggestion);
+    });
+}

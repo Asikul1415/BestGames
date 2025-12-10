@@ -8,6 +8,7 @@
 :root {
     --dark: #111;
     --gray: #222;
+    --light-gray: #2e2e2e;
     --light: #f5f5f5;
     --accent: #FFD700; 
     --accent-dark: #FFA500;
@@ -368,6 +369,36 @@ h2 {
     border-radius: 6px;
     font-weight: 600;
     cursor: pointer;
+}
+
+.search-suggestions{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: var(--gray);
+    padding: 2px;
+    margin-top: 5px;
+}
+
+.search-suggestions_hidden{
+    display: none;
+}
+
+.search-suggestion{
+    width: 35vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    background-color: var(--light-gray);
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.search-suggestion__game-image{
+    width: 3vw;
+    height: 6vh;
 }
 
 .games {
@@ -807,8 +838,9 @@ h2 {
 
 .catalog-actions {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    margin-left: 4.5vw;
     margin-bottom: 2rem;
     flex-wrap: wrap;
     gap: 1rem;

@@ -5,7 +5,7 @@ const catalogGameCardsData = [
         genre: "Шутер",
         price: "Бесплатно",
         rating: "★★★★☆",
-        image: "images/cs2.jpeg",
+        image: "images/cs2.jpg",
         isFree: true
     },
     {

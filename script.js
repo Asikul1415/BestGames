@@ -1,3 +1,126 @@
+const catalogGameCardsData = [
+    {
+        id: 0,
+        title: "CS2",
+        genre: "Шутер",
+        price: "Бесплатно",
+        rating: "★★★★☆",
+        image: "images/cs2.jpeg",
+        isFree: true
+    },
+    {
+        id: 1,
+        title: "ARC Raiders",
+        genre: "Шутер",
+        price: "2 999 ₽",
+        rating: "★★★☆☆",
+        image: "images/arc raiders.webp",
+        isFree: false
+    },
+    {
+        id: 2,
+        title: "Battlefield 6",
+        genre: "Шутер",
+        price: "6 999,00 ₽",
+        rating: "★★★★★",
+        image: "images/battlefield6.jpeg",
+        isFree: false
+    },
+    {
+        id: 3,
+        title: "Call of Duty: Black Ops 6",
+        genre: "Шутер",
+        price: "6 999,00 ₽",
+        rating: "★★★★★",
+        image: "images/call of duty black ops 6.jpeg",
+        isFree: false
+    },
+    {
+        id: 4,
+        title: "Forza Horizon 5: Standard Edition",
+        genre: "Гонки, Приключение",
+        price: "6 999,00 ₽",
+        rating: "★★★★★",
+        image: "images/fh 5.jpeg",
+        isFree: false
+    },
+    {
+        id: 5,
+        title: "BeamNG Drive",
+        genre: "Гонки, Симулятор",
+        price: "6 999,00 ₽",
+        rating: "★★★★★",
+        image: "images/BeamNG drive.jpeg",
+        isFree: false
+    },
+    {
+        id: 6,
+        title: "Sid Meier's Civilization VII",
+        genre: "Стратегия, Симулятор",
+        price: "5 600 ₽",
+        rating: "★★★★★",
+        image: "images/civilization 7.jpeg",
+        isFree: false
+    },
+    {
+        id: 7,
+        title: "Hearts of Iron IV",
+        genre: "Стратегия, Симулятор",
+        price: "639 ₽",
+        rating: "★★★★★",
+        image: "images/hoi4.jpeg",
+        isFree: false
+    },
+    {
+        id: 8,
+        title: "Europe Universalis V",
+        genre: "Стратегия, Симулятор",
+        price: "5 600 ₽",
+        rating: "★★★★★",
+        image: "images/Europe Universalis V.jpeg",
+        isFree: false
+    },
+    {
+        id: 9,
+        title: "The Elder Scrolls V: Skyrim Special Edition",
+        genre: "RPG, Симулятор, Приключение",
+        price: "3 200 ₽",
+        rating: "★★★★★",
+        image: "images/skyrim se.jpeg",
+        isFree: false
+    }
+];
+
+function renderGameCards(gameCards) {
+    const catalogGrid = document.getElementsByClassName('catalog-grid')[0];
+
+    if(catalogGrid){
+        catalogGrid.innerHTML = "";
+
+        gameCards.forEach(game => {
+            const gameCard = document.createElement('div');
+            gameCard.className = 'game-card';
+            gameCard.setAttribute('id', game.id);
+            
+            const gamePrice = game.isFree ? 'Бесплатно' : game.price;
+            gameCard.innerHTML = `
+                <img src="${game.image}" alt="${game.title}">
+                <div class="game-info">
+                    <h3>${game.title}</h3>
+                    <p class="genre">${game.genre}</p>
+                    <div class="game-footer">
+                        <span class="${game.isFree ? 'price free' : 'price'}">${gamePrice}</span>
+                        <span class="rating">${game.rating}</span>
+                    </div>
+                </div>
+            `
+
+            catalogGrid.appendChild(gameCard);
+        });
+
+    }
+}
+
 // Меню бургер
 const menuBtn = document.querySelector('.menu-btn');
 const nav = document.querySelector('.nav');
@@ -210,20 +333,18 @@ document.addEventListener('DOMContentLoaded', function() {
 // Фильтр по жанрам в каталоге
 const catalog = document.getElementsByClassName('catalog-header')[0];
 const catalogFilters = getFilters();
-const gameCards = getGameCards();
 
 if(catalog){
+    renderGameCards(catalogGameCardsData);
+
     const btnApply = document.getElementsByClassName('btn-apply')[0];
     btnApply.addEventListener('click', function() {
         const selectedFilters = getSelectedFilters(); 
 
-        hideAllGameCards();
         showGameCardsByGenres(selectedFilters);      
 
-    })
-}
+    });
 
-if(catalog){
     catalogFilters.forEach(filter => {
         filter.addEventListener('change', function() {
             if(filter.getAttribute('selected') === 'true'){
@@ -233,54 +354,6 @@ if(catalog){
                 filter.setAttribute('selected', 'true');
             }
         });
-    });
-}
-
-function getGameCards() {
-    if(catalog){
-        const gameCards = document.getElementsByClassName('game-card');
-        return Array.from(gameCards);
-    }
-    return null;
-}
-
-function showAllGameCards() {
-    if(catalog){
-        gameCards.map(card => {
-            card.classList.remove('game-card_hidden');
-        })
-    }
-}
-
-function hideAllGameCards() {
-    if(catalog){
-        gameCards.map(card => {
-            card.classList.add('game-card_hidden');
-        })
-    }
-}
-
-function showGameCardsByGenres(genres){
-    console.log(genres);
-    if(genres.length === 0){
-        showAllGameCards();
-    }
-
-    gameCards
-    .forEach(card => {
-        const gameGenres = card.getElementsByClassName('genre')[0];
-        
-        isFitting = true;
-        genres.forEach(genre => {
-            if(gameGenres.textContent.includes(genre) === false){
-                console.log(card, gameGenres, genre)
-                isFitting = false;
-            }
-        })
-
-        if(isFitting){
-            card.classList.remove('game-card_hidden');
-        }
     });
 }
 
@@ -309,6 +382,57 @@ function getSelectedFilters() {
     return null;
 }
 
+function getGameCards() {
+    if(catalog){
+        showAllGameCards(catalogGameCardsData);
+        const gameCards = document.getElementsByClassName('game-card');
+        return Array.from(gameCards);
+    }
+    return null;
+}
+
+function showAllGameCards() {
+    if(catalog){
+        renderGameCards(catalogGameCardsData);
+    }
+}
+
+function hideAllGameCards() {
+    if(catalog){
+        renderGameCards([]);
+    }
+}
+
+function showGameCardsByGenres(genres){
+    if(genres.length !== 0){
+        const gameCards = getGameCards();
+        let fittingGameCards = [];
+
+        gameCards.forEach(card => {
+            const gameGenres = card.getElementsByClassName('genre')[0];
+            
+            isFitting = true;
+            genres.forEach(genre => {
+                if(gameGenres.textContent.includes(genre) === false){
+                    isFitting = false;
+                }
+            })
+
+            if(isFitting){
+                fittingGameCards.push(catalogGameCardsData[card.getAttribute('id')]);
+            }
+        });
+
+        console.log(fittingGameCards);
+        renderGameCards(fittingGameCards);
+        return;
+    }
+
+    showAllGameCards();
+}
+
+
+
 
 //ПОИСК
 const searchField = document.getElementsByClassName('search-input')[0] ?? null;
@@ -320,20 +444,23 @@ if(searchField && searchButton){
     });
 }
 function search(query) {
+    const gameCards = getGameCards();
+    
     if(gameCards){
-        hideAllGameCards();
-
         if(query !== ""){
+            const fittingGameCards = [];
             gameCards.forEach(card => {
                 const cardText = card.textContent.toLowerCase();
     
                 if(cardText.includes(query.toLowerCase())){
-                    card.classList.remove('game-card_hidden');
+                    fittingGameCards.push(catalogGameCardsData[card.getAttribute('id')]);
                 }
             })
-
+            
+            renderGameCards(fittingGameCards);
             return;
         }
+
         showAllGameCards();
     }
 }

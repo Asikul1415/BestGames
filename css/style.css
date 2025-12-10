@@ -387,6 +387,10 @@ h2 {
     transition: transform 0.3s;
 }
 
+.game-card_hidden{
+    display: none;
+}
+
 .game-card:hover {
     transform: translateY(-5px);
 }
@@ -795,6 +799,12 @@ h2 {
 
 
 /* Каталог */
+.catalog-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
 .catalog-actions {
     display: flex;
     justify-content: space-between;
@@ -802,6 +812,12 @@ h2 {
     margin-bottom: 2rem;
     flex-wrap: wrap;
     gap: 1rem;
+}
+
+.catalog-header{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .filter-toggle {

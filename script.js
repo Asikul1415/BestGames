@@ -320,7 +320,7 @@ function search(query) {
     if(gameCards){
         hideAllGameCards();
         gameCards.forEach(card => {
-            if(card.textContent.includes(query)){
+            if(card.textContent.toLowerCase().includes(query.toLowerCase())){
                 card.classList.remove('game-card_hidden');
             }
         })

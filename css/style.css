@@ -73,16 +73,15 @@ h2 {
 }
 
 .nav a {
-    color: var(--light);
     text-decoration: none;
-    transition: color 0.3s;
 }
 
 .nav a:hover {
-    color: var(--accent);
+    transform: translateY(-5%);
 }
 
 .btn-login {
+    color: var(--light);
     background: transparent;
     border: 1px solid var(--light);
     padding: 0.5rem 1rem;

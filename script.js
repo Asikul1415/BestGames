@@ -352,15 +352,6 @@ function getSelectedFilters() {
     return null;
 }
 
-function getGameCards() {
-    if(catalog){
-        showAllGameCards(catalogGameCardsData);
-        const gameCards = document.getElementsByClassName('game-card');
-        return Array.from(gameCards);
-    }
-    return null;
-}
-
 function showAllGameCards() {
     if(catalog){
         renderGameCards(catalogGameCardsData);

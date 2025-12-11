@@ -14,16 +14,13 @@
             <div class="header__inner">
                 <a href="/" class="logo">BG</a>
                 <nav class="nav">
-                    <!--тут не по БЭМ -->
-                    <div class="container">
-                        <div class="search-box">
-                            <input type="text" placeholder="Поиск по играм..." class="search-input" id="search">
-                            <button class="search-btn">Найти</button>
-                        </div>
+                    <div class="search-box">
+                        <input type="text" placeholder="Поиск по играм..." class="search-input" id="search">
+                        <button class="search-btn">Найти</button>
                     </div>
                     <a href="login.html" class="btn-login nav__link">Войти</a>
                     <a href="catalog.html" class="btn-catalog nav__link">Каталог</a>
-                    <a href="index-light.html" class="btn-login nav__link">Светлая тема</a>
+                    <a href="index.html" class="btn-login nav__link">Тёмная тема</a>
                 </nav>
                 <button class="burger-menu__btn">
                     <span class="burger-menu__btn-line"></span>
@@ -37,17 +34,17 @@
         <section class="hero">
             <div class="container">
                 <h1 class="big-header">Игры для <span class="highlight">настоящих</span> геймеров</h1>
-                <p>Покупай, играй, побеждай</p>
+                <p class="hero-slogan">Покупай, играй, побеждай</p>
                 <a href="catalog.html" class="btn-hero">Смотреть игры →</a>
             </div>
         </section>
 
         <section class="slider-section">
             <div class="container">
-                <h2 class="middle-header">Новинки <span class="highlight">игр</span></h2>
+                <h2 class="middle-header slider-section__header-text">Новинки <span class="highlight">игр</span></h2>
                 <div class="slider">
                     <div class="slide active">
-                        <img src="images/clair obscur.webp" alt="Clair Obscur: Expedition 33">
+                        <img class="slide-image" src="images/clair obscur.webp" alt="Clair Obscur: Expedition 33">
                         <div class="slide-content">
                             <h3 class="small-header">Clair Obscur: Expedition 33</h3>
                             <p>«Завтра наступило»</p>
@@ -56,7 +53,7 @@
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="images/oblivion.jpg" alt="The Elder Scrolls 4: Oblivion Remastered">
+                        <img class="slide-image" src="images/oblivion.jpg" alt="The Elder Scrolls 4: Oblivion Remastered">
                         <div class="slide-content">
                             <h3 class="small-header">The Elder Scrolls 4: Oblivion Remastered</h3>
                             <p>«Навеки сомкни Врата Обливиона»</p>
@@ -65,7 +62,7 @@
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="images/dying light 2.webp" alt="Dying Light: The Beast">
+                        <img class="slide-image" src="images/dying light 2.webp" alt="Dying Light: The Beast">
                         <div class="slide-content">
                             <h3 class="small-header">Dying Light: The Beast</h3>
                             <p>«Выпусти зверя наружу»</p>
@@ -74,7 +71,7 @@
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="images/death stranding.jpeg" alt="Death Stranding 2: On the Beach">
+                        <img class="slide-image" src="images/death stranding.jpeg" alt="Death Stranding 2: On the Beach">
                         <div class="slide-content">
                             <h3 class="small-header">Death Stranding 2: On the Beach</h3>
                             <p>«Последняя доставка — в никуда»</p>
@@ -104,39 +101,7 @@
             <div class="container">
                 <h2 class="middle-header">Популярное <span class="highlight">сейчас</span></h2>
                 <div class="games-grid">
-                    <div class="game-card">
-                        <img src="images/cs2.jpg" alt="CS2">
-                        <div class="game-info">
-                            <h3 class="small-header">CS2</h3>
-                            <p class="genre">Шутер</p>
-                            <div class="game-footer">
-                                <span class="price free">Бесплатно</span>
-                                <span class="rating">★★★★☆</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="game-card">
-                        <img class="game-picture" src="images/arc raiders.webp" alt="Arc Raiders">
-                        <div class="game-info">
-                            <h3 class="small-header">ARC Raiders</h3>
-                            <p class="genre">Шутер</p>
-                            <div class="game-footer">
-                                <span class="price">2 999 ₽</span>
-                                <span class="rating">★★★☆☆</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="game-card">
-                        <img src="images/battlefield6.jpeg" alt="Battlefield 6">
-                        <div class="game-info">
-                            <h3 class="small-header">Battlefield 6</h3>
-                            <p class="genre">Шутер</p>
-                            <div class="game-footer">
-                                <span class="price">6 999,00 ₽</span>
-                                <span class="rating">★★★★★</span>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- There are game-card being loaded from js -->
                 </div>
             </div>
         </section>
@@ -164,6 +129,30 @@
                         <div class="feature-icon">⚡</div>
                         <h3 class="small-header">Скорость</h3>
                         <p>Ключи сразу после оплаты</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="partners">
+            <div class="container">
+                <h2 class="middle-header">Наши <span class="highlight">партнёры</span></h2>
+                <div class="partners-grid">
+                    <div class="partner">
+                        <img class="partner-image" src="images/rostelekom.jpeg">
+                        <h3 class="small-header">Ростелеком</h3>
+                    </div>
+                    <div class="partner">
+                        <img class="partner-image" src="images/dom ru.jpeg">
+                        <h3 class="small-header">Дом.ру</h3>
+                    </div>
+                    <div class="partner">
+                        <img class="partner-image" src="images/provoda.jpeg">
+                        <h3 class="small-header">Provoda</h3>
+                    </div>
+                    <div class="partner">
+                        <img class="partner-image" src="images/sber.jpeg">
+                        <h3 class="small-header">Сбер</h3>
                     </div>
                 </div>
             </div>

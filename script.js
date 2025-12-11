@@ -473,6 +473,14 @@ function renderSearchSuggestions(suggestions) {
             <h3 class="small-header">${searchSuggestion.title}</h3>
         `
 
+        suggestion.addEventListener('mouseenter', function() {
+            searchField.placeholder = searchSuggestion.title;
+        });
+
+        suggestion.addEventListener('mouseleave', function() {
+            searchField.placeholder = "Поиск по играм...";
+        });
+
         suggestion.addEventListener('click', function() {
             searchField.value = searchSuggestion.title;
             searchSuggestions.classList.add('search-suggestions_hidden');

@@ -1,10 +1,3 @@
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
-
-
 :root {
     --dark: #111;
     --gray: #222;
@@ -293,57 +286,6 @@
     background: rgba(255, 215, 0, 0.7);
 }
 
-@media (max-width: 768px) {
-    .slider {
-        border-radius: 8px;
-    }
-    
-    .slide img {
-        height: 300px;
-    }
-    
-    .slide-content {
-        padding: 1.5rem;
-    }
-    
-    .slide-content h3 {
-        font-size: 1.5rem;
-    }
-    
-    .slider-prev,
-    .slider-next {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .slider-prev {
-        left: 10px;
-    }
-    
-    .slider-next {
-        right: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .slide img {
-        height: 250px;
-    }
-    
-    .slide-content {
-        padding: 1rem;
-    }
-    
-    .slide-content h3 {
-        font-size: 1.2rem;
-    }
-    
-    .slide-price {
-        padding: 0.4rem 1rem;
-        font-size: 1rem;
-    }
-}
-
 .search {
     padding: 2rem 0;
     background: var(--gray);
@@ -626,37 +568,6 @@
     color: #777;
     font-size: 0.9rem;
 }
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-    }
-    
-    h2 {
-        font-size: 1.5rem;
-    }
-    
-    .nav {
-        display: none;
-    }
-    
-    .burger-menu__btn {
-        display: flex;
-    }
-    
-    .games-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-    
-    .search-box {
-        flex-direction: column;
-    }
-    
-    .search-btn {
-        padding: 1rem;
-    }
-}
-
 
 /* Общие стили для страниц авторизации */
 .auth-page .main {
@@ -1027,68 +938,6 @@
     width: 100%;
 }
 
-@media (max-width: 768px) {
-    .form-row {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .filter-toggle {
-        display: flex;
-    }
-    
-    .filters-sidebar {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1000;
-        padding: 2rem;
-        overflow-y: auto;
-    }
-    
-    .filters-sidebar.active {
-        display: block;
-    }
-    
-    .catalog-layout {
-        flex-direction: column;
-    }
-    
-    .form-links {
-        flex-direction: column;
-        gap: 0.5rem;
-        align-items: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .auth-container,
-    .admin-form,
-    .profile-info,
-    .purchase-history,
-    .profile-settings {
-        padding: 1.5rem;
-    }
-    
-    .catalog-actions {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    
-    .search-box {
-        width: 100%;
-    }
-}
-
-
-/* ==================== СВЕТЛАЯ ТЕМА ==================== */
-/* ==================== СВЕТЛАЯ ТЕМА (ЗАМЕТНЫЕ ИЗМЕНЕНИЯ) ==================== */
-
-/* ==================== СВЕТЛАЯ ТЕМА - ПРОСТО И ЗАМЕТНО ==================== */
-
 /* Когда у HTML есть класс light-theme */
 html.light-theme {
     /* ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ ДЛЯ СВЕТЛОЙ ТЕМЫ */
@@ -1099,13 +948,12 @@ html.light-theme {
     --accent-dark: #0056b3;
 }
 
-/* Теперь применяем переменные КО ВСЕМУ */
 html.light-theme body {
     background-color: var(--dark) !important;
     color: var(--light) !important;
 }
 
-/* 1. ШАПКА - ПОЛНОСТЬЮ БЕЛАЯ С СИНИМИ АКЦЕНТАМИ */
+/* ШАПКА В СВЕТЛОЙ ТЕМЕ  */
 html.light-theme .header {
     background: white !important;
     border-bottom: 3px solid var(--accent) !important;
@@ -1135,7 +983,7 @@ html.light-theme .btn-catalog {
     border: none !important;
 }
 
-/* 2. ГЕРОЙ БЛОК - СВЕТЛЫЙ ФОН, ТЕМНЫЙ ТЕКСТ */
+/* ВСТУПЛЕНИЕ В СВЕТЛОЙ ТЕМЕ */
 html.light-theme .hero {
     background: linear-gradient(135deg, #f8f9fa, #e9ecef) !important;
 }
@@ -1151,7 +999,7 @@ html.light-theme .hero .highlight {
 }
 
 html.light-theme .hero p {
-    color: #666 !important;
+    color: #667 !important;
 }
 
 html.light-theme .btn-hero {
@@ -1161,7 +1009,7 @@ html.light-theme .btn-hero {
     font-weight: 600 !important;
 }
 
-/* 3. СЛАЙДЕР - БЕЛЫЙ ФОН ВМЕСТО ТЕМНОГО */
+/* СЛАЙДЕР В СВЕТЛОЙ ТЕМЕ  */
 html.light-theme .slider-section {
     background: var(--gray) !important;
 }
@@ -1177,7 +1025,7 @@ html.light-theme .slider-next {
     color: #333 !important;
 }
 
-/* 4. КАРТОЧКИ ИГР - БЕЛЫЕ КАРТОЧКИ С ТЕНЬЮ */
+/* КАРТОЧКИ ИГР В СВЕТЛОЙ ТЕМЕ  */
 html.light-theme .game-card {
     background: white !important;
     border: 1px solid #ddd !important;
@@ -1190,7 +1038,7 @@ html.light-theme .game-info h3 {
 }
 
 html.light-theme .genre {
-    color: #666 !important;
+    color: #667 !important;
     background: #f8f9fa !important;
     padding: 3px 10px !important;
     border-radius: 15px !important;
@@ -1209,7 +1057,7 @@ html.light-theme .rating {
     color: #ffc107 !important; /* Желтые звезды */
 }
 
-/* 5. ПРЕИМУЩЕСТВА - СВЕТЛЫЕ КАРТОЧКИ */
+/* ПРЕИМУЩЕСТВА В СВЕТЛОЙ ТЕМЕ И */
 html.light-theme .features {
     background: var(--gray) !important;
 }
@@ -1225,7 +1073,7 @@ html.light-theme .feature h3 {
 }
 
 html.light-theme .feature p {
-    color: #666 !important;
+    color: #667 !important;
 }
 
 html.light-theme .feature-icon {
@@ -1240,7 +1088,7 @@ html.light-theme .feature-icon {
     margin: 0 auto 1rem !important;
 }
 
-/* 6. ПОДВАЛ - ТЕМНЫЙ ДЛЯ КОНТРАСТА */
+/* ПОДВАЛ В СВЕТЛОЙ ТЕМЕ  */
 html.light-theme .footer {
     background: #343a40 !important; /* Темно-серый */
     color: white !important;
@@ -1267,7 +1115,7 @@ html.light-theme .footer-bottom {
     color: #999 !important;
 }
 
-/* 7. ПОИСК - БЕЛЫЙ ИНПУТ */
+/* ПОИСК В СВЕТЛОЙ ТЕМЕ */
 html.light-theme .search-input {
     background: white !important;
     border: 2px solid #ddd !important;
@@ -1280,62 +1128,11 @@ html.light-theme .search-btn {
     border: none !important;
 }
 
-/* 8. БЛОК ПЕРЕКЛЮЧЕНИЯ ТЕМ (САМАЯ ЗАМЕТНАЯ ЧАСТЬ) */
-html.light-theme .theme-switcher {
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%) !important;
-    padding: 3rem 0 !important;
-    color: white !important;
-    margin-top: 3rem !important;
-}
-
-html.light-theme .theme-switcher p {
-    color: white !important;
-    font-size: 1.3rem !important;
-    margin-bottom: 1.5rem !important;
-    font-weight: 600 !important;
-}
-
-html.light-theme .theme-switcher-buttons {
-    display: flex !important;
-    gap: 1rem !important;
-    justify-content: center !important;
-}
-
-html.light-theme .theme-switcher-btn {
-    padding: 1rem 2rem !important;
-    border-radius: 50px !important;
-    font-weight: 600 !important;
-    text-decoration: none !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 10px !important;
-    transition: all 0.3s !important;
-}
-
-html.light-theme .theme-switcher-btn.dark {
-    background: rgba(0, 0, 0, 0.3) !important;
-    color: white !important;
-    border: 2px solid white !important;
-    backdrop-filter: blur(10px) !important;
-}
-
-html.light-theme .theme-switcher-btn.light {
-    background: white !important;
-    color: #007bff !important;
-    border: 2px solid white !important;
-}
-
-html.light-theme .theme-switcher-btn:hover {
-    transform: translateY(-3px) !important;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
-}
-
-/* 9. МЕНЮ-БУРГЕР В СВЕТЛОЙ ТЕМЕ */
+/* МЕНЮ-БУРГЕР В СВЕТЛОЙ ТЕМЕ */
 html.light-theme .burger-menu__btn span {
     background: #333 !important;
 }
 
-/* 10. ГЛАВНОЕ - СДЕЛАТЬ ВСЕ !important чтобы ПЕРЕКРЫТЬ СТАРЫЕ СТИЛИ */
 html.light-theme * {
     transition: background-color 0.3s, color 0.3s, border-color 0.3s !important;
 }

@@ -8,6 +8,7 @@ const catalogGameCardsData = [
         rating: "★★★★☆",
         image: "images/cs2.jpg",
         isFree: true,
+        online: 591628,
     },
     {
         id: 1,
@@ -18,6 +19,7 @@ const catalogGameCardsData = [
         rating: "★★★☆☆",
         image: "images/arc raiders.webp",
         isFree: false,
+        online: 245454,
     },
     {
         id: 2,
@@ -28,6 +30,7 @@ const catalogGameCardsData = [
         rating: "★★★★★",
         image: "images/battlefield6.jpeg",
         isFree: false,
+        online: 99517,
     },
     {
         id: 3,
@@ -38,6 +41,7 @@ const catalogGameCardsData = [
         rating: "★★★★★",
         image: "images/call of duty black ops 6.jpeg",
         isFree: false,
+        online: 47046,
     },
     {
         id: 4,
@@ -48,6 +52,7 @@ const catalogGameCardsData = [
         rating: "★★★★★",
         image: "images/fh 5.jpeg",
         isFree: false,
+        online: 7146,
     },
     {
         id: 5,
@@ -58,6 +63,7 @@ const catalogGameCardsData = [
         rating: "★★★★★",
         image: "images/BeamNG drive.jpeg",
         isFree: false,
+        online: 18524,
     },
     {
         id: 6,
@@ -68,6 +74,7 @@ const catalogGameCardsData = [
         rating: "★★★★★",
         image: "images/civilization 7.jpeg",
         isFree: false,
+        online: 7146,
     },
     {
         id: 7,
@@ -78,6 +85,7 @@ const catalogGameCardsData = [
         rating: "★★★★★",
         image: "images/hoi4.jpeg",
         isFree: false,
+        online: 22787,
     },
     {
         id: 8,
@@ -88,6 +96,7 @@ const catalogGameCardsData = [
         rating: "★★★★★",
         image: "images/Europe Universalis V.jpeg",
         isFree: false,
+        online: 13782,
     },
     {
         id: 9,
@@ -98,14 +107,16 @@ const catalogGameCardsData = [
         rating: "★★★★★",
         image: "images/skyrim se.jpeg",
         isFree: false,
+        online: 23309,
     }
 ];
 
-function renderGameCards(gameCards) {
-    const catalogGrid = document.getElementsByClassName('catalog-grid')[0];
 
-    if(catalogGrid){
-        catalogGrid.innerHTML = "";
+function renderGameCards(gameCards) {
+    const grid = document.getElementsByClassName('games-grid')[0];
+
+    if(grid){
+        grid.innerHTML = "";
 
         gameCards.forEach(game => {
             const gameCard = document.createElement('div');
@@ -116,24 +127,44 @@ function renderGameCards(gameCards) {
             gameCard.innerHTML = `
                 <img src="${game.image}" alt="${game.title}">
                 <div class="game-info">
-                    <h3>${game.title}</h3>
-                    <p class="genre">${game.genre}</p>
-                    <p class="developer">${game.developer}</p>
+                    <div class="game-title">
+                        <h3 class="small-header">${game.title}</h3>
+                    </div>
+                    <p class="game-genre">${game.genre}</p>
+                    <p class="game-developer">${game.developer}</p>
                     <div class="game-footer">
                         <span class="${game.isFree ? 'price free' : 'price'}">${gamePrice}</span>
                         <span class="rating">${game.rating}</span>
+                        <a href="catalog.html" class="slide-btn">Подробнее</a>
                     </div>
                 </div>
             `
 
-            catalogGrid.appendChild(gameCard);
+            grid.appendChild(gameCard);
         });
 
     }
 }
 
+function getMostPopularGames(count){
+    let games = Array.from(catalogGameCardsData);
+    games.sort((firstGame, secondGame) => {
+        return (firstGame.online - secondGame.online) * -1;
+    });
+
+    console.log(games);
+    return games.slice(0, count);
+}
+
+//INDEX.HTML
+const gamesGrid = document.getElementsByClassName('games-grid')[0];
+if(gamesGrid){
+    const games = getMostPopularGames(6);
+    renderGameCards(games);
+}
+
 // Меню бургер
-const menuBtn = document.querySelector('.menu-btn');
+const menuBtn = document.querySelector('.burger-menu__btn');
 const nav = document.querySelector('.nav');
 
 if (menuBtn) {
@@ -269,76 +300,6 @@ if(slider){
     });
 }
 
-
-
-// ==================== ПЕРЕКЛЮЧЕНИЕ ТЕМ ====================
-function initThemeSwitcher() {
-    const themeButtons = document.querySelectorAll('.theme-btn');
-    const switcherButtons = document.querySelectorAll('.theme-switcher-btn');
-    
-    // Переключение через кнопки в профиле
-    themeButtons.forEach(btn => {
-        btn.addEventListener('click', function() {
-            const theme = this.getAttribute('data-theme') || this.textContent.trim();
-            switchTheme(theme);
-            
-            // Сохраняем в localStorage
-            localStorage.setItem('theme', theme);
-        });
-    });
-    
-    // Переключение через блок в светлой теме
-    switcherButtons.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            if (this.classList.contains('dark')) {
-                e.preventDefault();
-                switchTheme('dark');
-                localStorage.setItem('theme', 'dark');
-                // Перенаправляем на темную тему через 500мс
-                setTimeout(() => {
-                    window.location.href = 'index.html';
-                }, 500);
-            }
-        });
-    });
-    
-    // Восстановление темы при загрузке
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        switchTheme(savedTheme);
-    }
-}
-
-// Функция переключения темы
-function switchTheme(theme) {
-    const body = document.body;
-    const themeButtons = document.querySelectorAll('.theme-btn');
-    
-    // Убираем активный класс у всех кнопок
-    themeButtons.forEach(btn => {
-        btn.classList.remove('active');
-        // Добавляем active к соответствующей кнопке
-        const btnTheme = btn.getAttribute('data-theme') || btn.textContent.trim();
-        if (btnTheme.toLowerCase().includes(theme.toLowerCase())) {
-            btn.classList.add('active');
-        }
-    });
-    
-    // Меняем тему на странице (если это не отдельная страница light)
-    if (theme === 'light' && !body.classList.contains('light-theme')) {
-        // Если нужно переключить на лету, можно добавить класс
-        // body.classList.add('light-theme');
-    } else if (theme === 'dark' && body.classList.contains('light-theme')) {
-        // body.classList.remove('light-theme');
-    }
-}
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    initThemeSwitcher();
-});
-
-
 // Фильтр по жанрам в каталоге
 const catalog = document.getElementsByClassName('catalog-header')[0];
 const catalogFilters = getFilters();
@@ -414,25 +375,23 @@ function hideAllGameCards() {
 
 function showGameCardsByGenres(genres){
     if(genres.length !== 0){
-        const gameCards = getGameCards();
         let fittingGameCards = [];
 
-        gameCards.forEach(card => {
-            const gameGenres = card.getElementsByClassName('genre')[0];
+        catalogGameCardsData.forEach(game => {
+            const gameGenres = game.genre;
             
             isFitting = true;
             genres.forEach(genre => {
-                if(gameGenres.textContent.includes(genre) === false){
+                if(gameGenres.includes(genre) === false){
                     isFitting = false;
                 }
             })
 
             if(isFitting){
-                fittingGameCards.push(catalogGameCardsData[card.getAttribute('id')]);
+                fittingGameCards.push(catalogGameCardsData[game.id]);
             }
         });
 
-        console.log(fittingGameCards);
         renderGameCards(fittingGameCards);
         return;
     }
@@ -453,16 +412,14 @@ if(searchField && searchButton){
     });
 }
 function search(query) {
-    const gameCards = getGameCards();
-    
-    if(gameCards){
         if(query !== ""){
             const fittingGameCards = [];
-            gameCards.forEach(card => {
-                const cardText = card.textContent.toLowerCase();
+            catalogGameCardsData.forEach(game => {
+                const title = game.title.toLowerCase();
+                const genres = game.genre.toLowerCase();
     
-                if(cardText.includes(query.toLowerCase())){
-                    fittingGameCards.push(catalogGameCardsData[card.getAttribute('id')]);
+                if(title.includes(query.toLowerCase()) || genres.includes(query.toLowerCase)){
+                    fittingGameCards.push(catalogGameCardsData[game.id]);
                 }
             })
             
@@ -471,7 +428,6 @@ function search(query) {
         }
 
         showAllGameCards();
-    }
 }
 
 //Подсказки при поиске
@@ -489,7 +445,7 @@ if(searchField && searchButton){
     searchField.addEventListener('blur', function() {
         setTimeout(() => {
             searchSuggestions.classList.add('search-suggestions_hidden');
-        }, 100)
+        }, 150)
     });
 }
 
@@ -523,7 +479,7 @@ function renderSearchSuggestions(suggestions) {
 
         suggestion.innerHTML = `
             <img class="search-suggestion__game-image" src="${searchSuggestion.image}" alt="${searchSuggestion.title}">
-            <h3>${searchSuggestion.title}</h3>
+            <h3 class="small-header">${searchSuggestion.title}</h3>
         `
 
         suggestion.addEventListener('click', function() {

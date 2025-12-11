@@ -119,7 +119,8 @@ function renderGameCards(gameCards) {
         grid.innerHTML = "";
 
         gameCards.forEach(game => {
-            const gameCard = document.createElement('div');
+            const gameCard = document.createElement('a');
+            gameCard.href = "catalog.html"
             gameCard.className = 'game-card';
             gameCard.setAttribute('id', game.id);
             
@@ -130,8 +131,8 @@ function renderGameCards(gameCards) {
                     <div class="game-title">
                         <h3 class="small-header">${game.title}</h3>
                     </div>
-                    <p class="game-genre">${game.genre}</p>
-                    <p class="game-developer">${game.developer}</p>
+                    <p class="game-caption">${game.genre}</p>
+                    <p class="game-caption">${game.developer}</p>
                     <div class="game-footer">
                         <span class="${game.isFree ? 'price free' : 'price'}">${gamePrice}</span>
                         <span class="rating">${game.rating}</span>

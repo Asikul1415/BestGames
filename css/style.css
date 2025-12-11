@@ -1127,3 +1127,197 @@ html.light-theme .search-btn {
 html.light-theme .burger-menu__btn-line {
     background: #333 !important;
 }
+
+
+
+/* Мобильная адаптивность */
+@media (max-width: 767px) {
+    .big-header {
+        font-size: 1.8rem;
+    }
+    
+    .middle-header {
+        font-size: 1.5rem;
+    }
+
+    .header__inner {
+        flex-wrap: wrap;
+    }
+    
+    .nav {
+        order: 3;
+        width: 100%;
+        margin-top: 1rem;
+        flex-direction: column;
+        gap: 0.5rem;
+        display: none;
+    }
+    
+    .nav.active {
+        display: flex;
+    }
+    
+    .burger-menu {
+        display: flex;
+    }
+
+    .slider {
+        max-width: 100%;
+    }
+    
+    .slide-image {
+        height: 40vh;
+    }
+    
+    .slide-content {
+        padding: 1rem;
+    }
+    
+    .slide-title {
+        font-size: 1.2rem;
+    }
+
+    .games-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .search-box {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .search-input {
+        width: 100%;
+    }
+    
+    .search-btn {
+        padding: 0.8rem;
+    }
+ 
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .auth-container {
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .catalog-layout {
+        flex-direction: column;
+    }
+    
+    .filters-sidebar {
+        position: static;
+        margin-bottom: 1.5rem;
+    }
+    
+    .games-grid_catalog-version {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-content {
+        gap: 1rem;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .settings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-form {
+        padding: 1rem;
+    }
+
+    .search-suggestion {
+        width: 100%;
+    }
+
+    .partners-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .partner-image {
+        width: 50vw;
+        height: 20vh;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .hero {
+        padding: 2rem 0;
+    }
+    
+    .btn-hero {
+        text-align: center;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* Планшетная адаптивность (768px - 1919px) */
+@media (min-width: 768px) and (max-width: 1919px) {
+    .big-header {
+        font-size: 2rem;
+    }
+    
+    .slide-image {
+        height: 50vh;
+    }
+
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .games-grid_catalog-version {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .search-box {
+        width: 50vw;
+    }
+}
+
+/* Десктопная адаптивность (выше 1920px) */
+@media (min-width: 1921px) {
+    /* 2. Изменение 2: Увеличение размера заголовков */
+    .big-header {
+        font-size: 3rem;
+    }
+    
+    /* 3. Изменение 3: Увеличение слайдера */
+    .slider {
+        max-width: 1200px;
+    }
+    
+    .slide-image {
+        height: 70vh;
+    }
+}

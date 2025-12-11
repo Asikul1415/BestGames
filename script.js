@@ -170,30 +170,34 @@ const nav = document.querySelector('.nav');
 
 if (menuBtn) {
     menuBtn.addEventListener('click', () => {
-        nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-        if (window.innerWidth <= 768) {
-            nav.style.flexDirection = 'column';
-            nav.style.position = 'absolute';
-            nav.style.top = '100%';
-            nav.style.left = '0';
-            nav.style.width = '100%';
-            nav.style.background = 'var(--gray)';
-            nav.style.padding = '1rem';
-            nav.style.gap = '1rem';
-        }
+        nav.classList.toggle('active');
+    });
+    
+    // Закрытие меню при клике на ссылку
+    const navLinks = document.querySelectorAll('.nav__link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                nav.classList.remove('active');
+            }
+        });
     });
 }
 
 // Адаптация меню при ресайзе
 window.addEventListener('resize', () => {
     if (window.innerWidth > 768) {
-        nav.style.display = 'flex';
-        nav.style.flexDirection = 'row';
-        nav.style.position = 'static';
-        nav.style.background = 'transparent';
-        nav.style.padding = '0';
-    } else {
-        nav.style.display = 'none';
+        nav.classList.remove('active');
+    }
+});
+
+// Закрытие меню при клике вне его области
+document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768 && 
+        nav.classList.contains('active') && 
+        !nav.contains(e.target) && 
+        !menuBtn.contains(e.target)) {
+        nav.classList.remove('active');
     }
 });
 

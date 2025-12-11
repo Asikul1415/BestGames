@@ -125,7 +125,7 @@ function renderGameCards(gameCards) {
             
             const gamePrice = game.isFree ? 'Бесплатно' : game.price;
             gameCard.innerHTML = `
-                <img src="${game.image}" alt="${game.title}">
+                <img class="game-image" src="${game.image}" alt="${game.title}">
                 <div class="game-info">
                     <div class="game-title">
                         <h3 class="small-header">${game.title}</h3>
@@ -164,7 +164,7 @@ if(gamesGrid){
 }
 
 // Меню бургер
-const menuBtn = document.querySelector('.burger-menu__btn');
+const menuBtn = document.querySelector('.burger-menu');
 const nav = document.querySelector('.nav');
 
 if (menuBtn) {

@@ -94,7 +94,7 @@
     font-weight: 500;
 }
 
-.burger-menu__btn {
+.burger-menu {
     display: none;
     flex-direction: column;
     gap: 4px;
@@ -187,14 +187,13 @@
     color: white;
 }
 
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-.slide-content h3 { 
+.slide-title { 
     font-size: 2rem;
     margin-bottom: 0.5rem;
     color: var(--accent);
 }
 
-.slide-content p {
+.slide-caption {
     font-size: 1rem;
     color: #ddd;
     margin-bottom: 1rem;
@@ -380,14 +379,10 @@
     transform: translateY(-5px);
 }
 
-.game-card img {
+.game-image {
     width: 100%;
     height: 25vh;
     object-fit: contain;
-}
-
-.game-info {
-    padding: 1rem;
 }
 
 .game-title {
@@ -445,11 +440,11 @@
     color: var(--accent);
 }
 
-.feature h3 {
+.feature-title{
     margin-bottom: 0.5rem;
 }
 
-.feature p {
+.feature-caption{
     color: #aaa;
     font-size: 0.9rem;
 }
@@ -506,7 +501,7 @@
     margin-bottom: 0.5rem;
 }
 
-.footer-section h4 {
+.footer-title{
     color: var(--accent);
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
@@ -519,27 +514,16 @@
     gap: 0.8rem;
 }
 
-.footer-links a {
+.footer-link{
     color: #aaa;
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.3s, transform 0.3s;
 }
 
-.footer-links a:hover {
+.footer-link:hover {
     color: var(--accent);
     transform: translateX(5px);
-}
-
-
-.footer-links a {
-    color: var(--light);
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer-links a:hover {
-    color: var(--accent);
 }
 
 .footer-contact {
@@ -549,7 +533,7 @@
     margin-top: 1rem;
 }
 
-.footer-contact p {
+.footer-contact__text{
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -557,7 +541,7 @@
     font-size: 0.9rem;
 }
 
-.footer-contact i {
+.footer-contact__icon {
     color: var(--accent);
     width: 16px;
 }
@@ -587,7 +571,7 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-.auth-container h1 {
+.auth-container__header {
     text-align: center;
     margin-bottom: 0.5rem;
 }
@@ -615,9 +599,9 @@
     color: var(--accent);
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
+.form-group__input-field,
+.form-group__genres,
+.form-group__description-field {
     padding: 1rem;
     background: var(--dark);
     border: 2px solid #444;
@@ -627,9 +611,9 @@
     transition: border 0.3s;
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
+.form-group__input-field:focus,
+.form-group__genres:focus,
+.form-group__description-field:focus {
     border-color: var(--accent);
     outline: none;
 }
@@ -639,7 +623,7 @@
     gap: 1rem;
 }
 
-.form-row .form-group {
+.form-group_form-row {
     flex: 1;
 }
 
@@ -649,12 +633,12 @@
     gap: 0.5rem;
 }
 
-.form-checkbox input {
+.form-checkbox__input-field {
     width: 18px;
     height: 18px;
 }
 
-.form-checkbox label {
+.form-checkbox__title {
     font-size: 0.9rem;
     color: #aaa;
 }
@@ -713,9 +697,7 @@
     border-radius: 8px;
 }
 
-.profile-info h2,
-.purchase-history h2,
-.profile-settings h2 {
+.middle-header_profile {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -757,10 +739,7 @@
     border-radius: 6px;
 }
 
-.table-row__header {
-    display: flex;
-    padding: 1rem;
-    border-radius: 6px;
+.table-row_header {
     background: #333;
     font-weight: 600;
 }
@@ -947,9 +926,11 @@ html.light-theme {
     --light: #333333;
     --accent: #007bff; /* СИНИЙ вместо золотого */
     --accent-dark: #0056b3;
+
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s !important;
 }
 
-html.light-theme body {
+html.light-theme .body {
     background-color: var(--dark) !important;
     color: var(--light) !important;
 }
@@ -966,7 +947,7 @@ html.light-theme .logo {
     font-size: 2.2rem !important;
 }
 
-html.light-theme .nav a {
+html.light-theme .nav__link {
     color: var(--light) !important;
     font-weight: 600 !important;
 }
@@ -989,7 +970,7 @@ html.light-theme .hero {
     background: linear-gradient(135deg, #f8f9fa, #e9ecef) !important;
 }
 
-html.light-theme .hero h1 {
+html.light-theme .big-header {
     color: #222 !important;
 }
 
@@ -999,7 +980,7 @@ html.light-theme .hero .highlight {
     -webkit-text-fill-color: var(--accent) !important;
 }
 
-html.light-theme .hero p {
+html.light-theme .hero .hero-slogan {
     color: #667 !important;
 }
 
@@ -1034,10 +1015,6 @@ html.light-theme .game-card {
     border-radius: 10px !important;
 }
 
-html.light-theme .game-info h3 {
-    color: #222 !important;
-}
-
 html.light-theme .genre {
     color: #667 !important;
     background: #f8f9fa !important;
@@ -1058,7 +1035,7 @@ html.light-theme .rating {
     color: #ffc107 !important; /* Желтые звезды */
 }
 
-/* ПРЕИМУЩЕСТВА В СВЕТЛОЙ ТЕМЕ И */
+/* ПРЕИМУЩЕСТВА В СВЕТЛОЙ ТЕМЕ */
 html.light-theme .features {
     background: var(--gray) !important;
 }
@@ -1069,11 +1046,11 @@ html.light-theme .feature {
     box-shadow: 0 5px 15px rgba(0,0,0,0.03) !important;
 }
 
-html.light-theme .feature h3 {
+html.light-theme .feature .feature-title {
     color: #222 !important;
 }
 
-html.light-theme .feature p {
+html.light-theme .feature-caption {
     color: #667 !important;
 }
 
@@ -1099,15 +1076,15 @@ html.light-theme .footer-logo {
     color: white !important;
 }
 
-html.light-theme .footer-links a {
+html.light-theme .footer-link {
     color: #ccc !important;
 }
 
-html.light-theme .footer-links a:hover {
+html.light-theme .footer-link:hover {
     color: white !important;
 }
 
-html.light-theme .footer-contact p {
+html.light-theme .footer-contact__text {
     color: #aaa !important;
 }
 
@@ -1130,10 +1107,6 @@ html.light-theme .search-btn {
 }
 
 /* МЕНЮ-БУРГЕР В СВЕТЛОЙ ТЕМЕ */
-html.light-theme .burger-menu__btn span {
+html.light-theme .burger-menu__btn-line {
     background: #333 !important;
-}
-
-html.light-theme * {
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s !important;
 }

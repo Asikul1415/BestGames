@@ -16,6 +16,10 @@
                 <nav class="nav">
                     <a href="/" class="nav-link">На сайт</a>
                 </nav>
+                <button class="burger-menu">
+                    <span class="burger-menu__btn-line"></span>
+                    <span class="burger-menu__btn-line"></span>
+                </button>
             </div>
         </div>
     </header>
@@ -29,13 +33,13 @@
 
             <form class="admin-form" action="#" method="POST">
                 <div class="form-row">
-                    <div class="form-group">
+                    <div class="form-group form-group_form-row">
                         <label for="game_name">Название игры *</label>
-                        <input type="text" id="game_name" name="game_name" required placeholder="Например: Cyberpunk 2077">
+                        <input class="form-group__input-field" type="text" id="game_name" name="game_name" required placeholder="Например: Cyberpunk 2077">
                     </div>
                     <div class="form-group">
                         <label for="game_genre">Жанр *</label>
-                        <select id="game_genre" name="game_genre" required>
+                        <select class="form-group__genres" id="game_genre" name="game_genre" required>
                             <option value="">Выберите жанр</option>
                             <option value="shooter">Шутер</option>
                             <option value="rpg">RPG</option>
@@ -46,19 +50,19 @@
                 </div>
                 <div class="form-group">
                     <label for="game_developer">Компания-разработчик *</label>
-                    <input type="text" id="game_developer" name="game_developer" required placeholder="Например: CD Projekt Red">
+                    <input class="form-group__input-field" type="text" id="game_developer" name="game_developer" required placeholder="Например: CD Projekt Red">
                 </div>
                 <div class="form-group">
                     <label for="game_image">Ссылка на изображение *</label>
-                    <input type="url" id="game_image" name="game_image" required placeholder="https://example.com/image.jpg">
+                    <input class="form-group__input-field" type="url" id="game_image" name="game_image" required placeholder="https://example.com/image.jpg">
                 </div>
                 <div class="form-group">
                     <label for="game_description">Описание игры *</label>
-                    <textarea id="game_description" name="game_description" rows="4" required placeholder="Опишите игру..."></textarea>
+                    <textarea class="form-group__description-field" id="game_description" name="game_description" rows="4" required placeholder="Опишите игру..."></textarea>
                 </div>
                 <div class="form-group">
                     <label for="game_price">Стоимость (в рублях) *</label>
-                    <input type="number" id="game_price" name="game_price" required placeholder="2999" min="0">
+                    <input class="form-group__input-field" type="number" id="game_price" name="game_price" required placeholder="2999" min="0">
                 </div>
                 <button type="submit" class="btn-submit btn-admin">
                     <i class="fas fa-plus"></i> Добавить игру
@@ -73,45 +77,45 @@
                 <div class="footer-section">
                     <div class="footer-logo">BestGames</div>
                     <div class="footer-contact">
-                        <p><i class="fas fa-phone"></i> 8-800-999-55-99</p>
-                        <p><i class="fas fa-envelope"></i> best@games.ru</p>
+                        <p class="footer-contact__text"><i class="fas fa-phone footer-contact__icon"></i> 8-800-999-55-99</p>
+                        <p class="footer-contact__text"><i class="fas fa-envelope footer-contact__icon"></i> best@games.ru</p>
                     </div>
                 </div>
                 
                 <div class="footer-section">
-                    <h4>Клиентам</h4>
+                    <h4 class="footer-title">Клиентам</h4>
                     <div class="footer-links">
-                        <a href="catalog.html">Каталог игр</a>
-                        <a href="#">Акции</a>
-                        <a href="#">Бонусная программа</a>
-                        <a href="#">Помощь</a>
+                        <a class="footer-link" href="catalog.html">Каталог игр</a>
+                        <a class="footer-link" href="#">Акции</a>
+                        <a class="footer-link" href="#">Бонусная программа</a>
+                        <a class="footer-link" href="#">Помощь</a>
                     </div>
                 </div>
                 
                 <div class="footer-section">
-                    <h4>Партнерам</h4>
+                    <h4 class="footer-title">Партнерам</h4>
                     <div class="footer-links">
-                        <a href="#">Сотрудничество</a>
-                        <a href="#">Размещение рекламы</a>
+                        <a class="footer-link" href="#">Сотрудничество</a>
+                        <a class="footer-link" href="#">Размещение рекламы</a>
                     </div>
                 </div>
                 
                 <div class="footer-section">
-                    <h4>О нас</h4>
+                    <h4 class="footer-title">О нас</h4>
                     <div class="footer-links">
-                        <a href="#">О компании</a>
-                        <a href="#">Контакты</a>
+                        <a class="footer-link" href="#">О компании</a>
+                        <a class="footer-link" href="#">Контакты</a>
                     </div>
                 </div>
                 
                 <div class="footer-section">
-                    <h4>Навигация</h4>
+                    <h4 class="footer-title">Навигация</h4>
                     <div class="footer-links">
-                        <a href="index.html">Главная</a>
-                        <a href="register.html">Регистрация</a>
-                        <a href="login.html">Авторизация</a>
-                        <a href="profile.html">Личный кабинет</a>
-                        <a href="#search" class="search-link">Поиск</a>
+                        <a class="footer-link" href="index.html">Главная</a>
+                        <a class="footer-link" href="register.html">Регистрация</a>
+                        <a class="footer-link" href="login.html">Авторизация</a>
+                        <a class="footer-link" href="profile.html">Личный кабинет</a>
+                        <a class="footer-link" href="#search" class="search-link">Поиск</a>
                     </div>
                 </div>
             </div>

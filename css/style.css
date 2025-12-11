@@ -479,7 +479,8 @@
 }
 
 .footer {
-    background: var(--dark);
+    margin-top: 3rem;
+    background: var(--gray);
     padding: 3rem 0 1rem;
 }
 

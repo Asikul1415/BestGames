@@ -17,9 +17,9 @@
                     <a href="catalog.html" class="btn-catalog">Каталог</a>
                     <a href="/" class="nav-link">Выйти</a>
                 </nav>
-                <button class="menu-btn">
-                    <span></span>
-                    <span></span>
+                <button class="burger-menu__btn">
+                    <span class="burger-menu__btn-line"></span>
+                    <span class="burger-menu__btn-line"></span>
                 </button>
             </div>
         </div>
@@ -28,13 +28,13 @@
     <main class="main">
         <div class="container">
             <div class="profile-header">
-                <h1>Личный <span class="highlight">кабинет</span></h1>
+                <h1 class="big-header">Личный <span class="highlight">кабинет</span></h1>
                 <p>Управляйте своим профилем и покупками</p>
             </div>
 
             <div class="profile-content">
                 <section class="profile-info">
-                    <h2><i class="fas fa-user"></i> Информация о пользователе</h2>
+                    <h2 class="middle-header"><i class="fas fa-user"></i> Информация о пользователе</h2>
                     <div class="info-grid">
                         <div class="info-item">
                             <span class="info-label">E-mail:</span>
@@ -60,7 +60,7 @@
                 </section>
 
                 <section class="purchase-history">
-                    <h2><i class="fas fa-history"></i> История покупок</h2>
+                    <h2 class="middle-header"><i class="fas fa-history"></i> История покупок</h2>
                     <div class="history-table">
                         <div class="table-row header">
                             <div class="table-cell">Дата</div>
@@ -81,7 +81,7 @@
                 </section>
 
                 <section class="profile-settings">
-                    <h2><i class="fas fa-cog"></i> Настройки профиля</h2>
+                    <h2 class="middle-header"><i class="fas fa-cog"></i> Настройки профиля</h2>
                     <div class="settings-grid">
                         <button class="btn-settings">
                             <i class="fas fa-key"></i> Сменить пароль
@@ -90,7 +90,7 @@
                             <span>Тема:</span>
                             <div class="toggle-buttons">
                                 <button class="theme-btn active">Тёмная</button>
-                                <button class="theme-btn">Светлая</button>
+                                <a class="theme-btn" href="index-light.html">Светлая</a>
                             </div>
                         </div>
                     </div>

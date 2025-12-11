@@ -8,25 +8,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="html-body">
     <header class="header">
         <div class="container">
             <div class="header__inner">
                 <a href="/" class="logo">BG</a>
                 <nav class="nav">
+                    <!--тут не по БЭМ -->
                     <div class="container">
                         <div class="search-box">
                             <input type="text" placeholder="Поиск по играм..." class="search-input" id="search">
                             <button class="search-btn">Найти</button>
                         </div>
                     </div>
-                    <a href="login.html" class="btn-login">Войти</a>
-                    <a href="catalog.html" class="btn-catalog">Каталог</a>
-                    <a href="index.html" class="btn-login">Тёмная тема</a>
+                    <a href="login.html" class="btn-login nav__link">Войти</a>
+                    <a href="catalog.html" class="btn-catalog nav__link">Каталог</a>
+                    <a href="index-light.html" class="btn-login nav__link">Светлая тема</a>
                 </nav>
-                <button class="menu-btn">
-                    <span></span>
-                    <span></span>
+                <button class="burger-menu__btn">
+                    <span class="burger-menu__btn-line"></span>
+                    <span class="burger-menu__btn-line"></span>
                 </button>
             </div>
         </div>
@@ -35,7 +36,7 @@
     <main class="main">
         <section class="hero">
             <div class="container">
-                <h1>Игры для <span class="highlight">настоящих</span> геймеров</h1>
+                <h1 class="big-header">Игры для <span class="highlight">настоящих</span> геймеров</h1>
                 <p>Покупай, играй, побеждай</p>
                 <a href="catalog.html" class="btn-hero">Смотреть игры →</a>
             </div>
@@ -43,12 +44,12 @@
 
         <section class="slider-section">
             <div class="container">
-                <h2>Новинки <span class="highlight">игр</span></h2>
+                <h2 class="middle-header">Новинки <span class="highlight">игр</span></h2>
                 <div class="slider">
                     <div class="slide active">
                         <img src="images/clair obscur.webp" alt="Clair Obscur: Expedition 33">
                         <div class="slide-content">
-                            <h3>Clair Obscur: Expedition 33</h3>
+                            <h3 class="small-header">Clair Obscur: Expedition 33</h3>
                             <p>«Завтра наступило»</p>
                             <div class="slide-price">1 949 ₽</div>
                             <a href="catalog.html" class="slide-btn">Подробнее</a>
@@ -57,7 +58,7 @@
                     <div class="slide">
                         <img src="images/oblivion.jpg" alt="The Elder Scrolls 4: Oblivion Remastered">
                         <div class="slide-content">
-                            <h3>The Elder Scrolls 4: Oblivion Remastered</h3>
+                            <h3 class="small-header">The Elder Scrolls 4: Oblivion Remastered</h3>
                             <p>«Навеки сомкни Врата Обливиона»</p>
                             <div class="slide-price">3 499 ₽</div>
                             <a href="catalog.html" class="slide-btn">Подробнее</a>
@@ -66,7 +67,7 @@
                     <div class="slide">
                         <img src="images/dying light 2.webp" alt="Dying Light: The Beast">
                         <div class="slide-content">
-                            <h3>Dying Light: The Beast</h3>
+                            <h3 class="small-header">Dying Light: The Beast</h3>
                             <p>«Выпусти зверя наружу»</p>
                             <div class="slide-price">4 299 ₽</div>
                             <a href="catalog.html" class="slide-btn">Подробнее</a>
@@ -75,7 +76,7 @@
                     <div class="slide">
                         <img src="images/death stranding.jpeg" alt="Death Stranding 2: On the Beach">
                         <div class="slide-content">
-                            <h3>Death Stranding 2: On the Beach</h3>
+                            <h3 class="small-header">Death Stranding 2: On the Beach</h3>
                             <p>«Последняя доставка — в никуда»</p>
                             <div class="slide-price">3 999 ₽</div>
                             <a href="catalog.html" class="slide-btn">Подробнее</a>
@@ -101,12 +102,12 @@
 
         <section class="games">
             <div class="container">
-                <h2>Популярное <span class="highlight">сейчас</span></h2>
+                <h2 class="middle-header">Популярное <span class="highlight">сейчас</span></h2>
                 <div class="games-grid">
                     <div class="game-card">
                         <img src="images/cs2.jpg" alt="CS2">
                         <div class="game-info">
-                            <h3>CS2</h3>
+                            <h3 class="small-header">CS2</h3>
                             <p class="genre">Шутер</p>
                             <div class="game-footer">
                                 <span class="price free">Бесплатно</span>
@@ -117,7 +118,7 @@
                     <div class="game-card">
                         <img class="game-picture" src="images/arc raiders.webp" alt="Arc Raiders">
                         <div class="game-info">
-                            <h3>ARC Raiders</h3>
+                            <h3 class="small-header">ARC Raiders</h3>
                             <p class="genre">Шутер</p>
                             <div class="game-footer">
                                 <span class="price">2 999 ₽</span>
@@ -128,7 +129,7 @@
                     <div class="game-card">
                         <img src="images/battlefield6.jpeg" alt="Battlefield 6">
                         <div class="game-info">
-                            <h3>Battlefield 6</h3>
+                            <h3 class="small-header">Battlefield 6</h3>
                             <p class="genre">Шутер</p>
                             <div class="game-footer">
                                 <span class="price">6 999,00 ₽</span>
@@ -142,26 +143,26 @@
 
         <section class="features">
             <div class="container">
-                <h2>Почему <span class="highlight">мы</span>?</h2>
+                <h2 class="middle-header">Почему <span class="highlight">мы</span>?</h2>
                 <div class="features-grid">
                     <div class="feature">
                         <div class="feature-icon">$</div>
-                        <h3>Низкие цены</h3>
+                        <h3 class="small-header">Низкие цены</h3>
                         <p>Одни из нижайших цен на рынке</p>
                     </div>
                     <div class="feature">
                         <div class="feature-icon">💸</div>
-                        <h3>Ежемесячные акции</h3>
+                        <h3 class="small-header">Ежемесячные акции</h3>
                         <p>Каждый месяц получайте до 60% выгоды</p>
                     </div>
                     <div class="feature">
                         <div class="feature-icon">🎧</div>
-                        <h3>Поддержка 24/7</h3>
+                        <h3 class="small-header">Поддержка 24/7</h3>
                         <p>Поможем решить любые вопросы</p>
                     </div>
                     <div class="feature">
                         <div class="feature-icon">⚡</div>
-                        <h3>Скорость</h3>
+                        <h3 class="small-header">Скорость</h3>
                         <p>Ключи сразу после оплаты</p>
                     </div>
                 </div>

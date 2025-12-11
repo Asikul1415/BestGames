@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="html-body">
     <header class="header">
         <div class="container">
             <div class="header__inner">
@@ -27,9 +27,9 @@
                     <a href="profile.html" class="btn-login">Кабинет</a>
                     <a href="catalog.html" class="btn-catalog">Каталог</a>
                 </nav>
-                <button class="menu-btn">
-                    <span></span>
-                    <span></span>
+                <button class="burger-menu__btn">
+                    <span class="burger-menu__btn-line"></span>
+                    <span class="burger-menu__btn-line"></span>
                 </button>
             </div>
         </div>
@@ -38,13 +38,13 @@
     <main class="main">
         <div class="container catalog-container">
             <div class="catalog-header">
-                <h1>Каталог <span class="highlight">игр</span></h1>
+                <h1 class="big-header">Каталог <span class="highlight">игр</span></h1>
                 <p>Выбирайте из тысяч игр по лучшим ценам</p>
             </div>
 
             <div class="catalog-layout">
                 <aside class="filters-sidebar" id="filtersSidebar">
-                    <h3>Фильтр по жанрам</h3>
+                    <h3 class="small-header">Фильтр по жанрам</h3>
                     <div class="filter-group">
                         <label class="filter-checkbox">
                             <input type="checkbox"> Шутер
@@ -68,7 +68,7 @@
                     <button class="btn-apply">Применить</button>
                 </aside>
 
-                <section class="catalog-grid">
+                <section class="games-grid games-grid_catalog-version">
                     <!-- Here are game-card(s) being loaded from JS -->
                 </section>
             </div>

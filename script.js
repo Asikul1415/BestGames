@@ -100,15 +100,42 @@ const catalogGameCardsData = [
     },
     {
         id: 9,
-        title: "The Elder Scrolls V: Skyrim Special Edition",
+        title: "TES V: Skyrim Special Edition",
         genre: "RPG, Симулятор, Приключение",
         developer: "Bethesda Game Studios",
         price: "3 200 ₽",
         rating: "★★★★★",
-        image: "images/skyrim se.jpeg",
+        image: "images/skyrim se.webp",
         isFree: false,
         online: 23309,
     }
+];
+
+const catalogGameGenresData = [
+    {
+        id: 0,
+        title: "Шутер"
+    },
+        {
+        id: 1,
+        title: "RPG"
+    },
+        {
+        id: 2,
+        title: "Стратегия"
+    },
+        {
+        id: 3,
+        title: "Гонки"
+    },
+        {
+        id: 4,
+        title: "Симулятор"
+    },
+        {
+        id: 5,
+        title: "Приключение"
+    },
 ];
 
 
@@ -166,19 +193,20 @@ if(gamesGrid){
 
 // Меню бургер
 const menuBtn = document.querySelector('.burger-menu');
-const nav = document.querySelector('.nav');
+const maxWidth = 768;
+const navInner = document.querySelector('.nav__inner');
 
 if (menuBtn) {
     menuBtn.addEventListener('click', () => {
-        nav.classList.toggle('active');
+        navInner.classList.toggle('active');
     });
     
     // Закрытие меню при клике на ссылку
     const navLinks = document.querySelectorAll('.nav__link');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            if (window.innerWidth <= 768) {
-                nav.classList.remove('active');
+            if (window.innerWidth <= maxWidth) {
+                navInner.classList.remove('active');
             }
         });
     });
@@ -186,18 +214,18 @@ if (menuBtn) {
 
 // Адаптация меню при ресайзе
 window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) {
-        nav.classList.remove('active');
+    if (window.innerWidth > maxWidth) {
+        navInner.classList.remove('active');
     }
 });
 
 // Закрытие меню при клике вне его области
 document.addEventListener('click', (e) => {
-    if (window.innerWidth <= 768 && 
-        nav.classList.contains('active') && 
-        !nav.contains(e.target) && 
+    if (window.innerWidth <= maxWidth && 
+        navInner.classList.contains('active') && 
+        !navInner.contains(e.target) && 
         !menuBtn.contains(e.target)) {
-        nav.classList.remove('active');
+        navInner.classList.remove('active');
     }
 });
 
@@ -402,40 +430,16 @@ function showGameCardsByGenres(genres){
 const searchField = document.getElementsByClassName('search-input')[0] ?? null;
 const searchButton = document.getElementsByClassName('search-btn')[0] ?? null;
 
-if(searchField && searchButton){
-    searchButton.addEventListener('click', function() {
-        search(searchField.value);    
-    });
-}
-function search(query) {
-        if(query !== ""){
-            const fittingGameCards = [];
-            catalogGameCardsData.forEach(game => {
-                const title = game.title.toLowerCase();
-                const genres = game.genre.toLowerCase();
-    
-                if(title.includes(query.toLowerCase()) || genres.includes(query.toLowerCase)){
-                    fittingGameCards.push(catalogGameCardsData[game.id]);
-                }
-            })
-            
-            renderGameCards(fittingGameCards);
-            return;
-        }
-
-        showAllGameCards();
-}
-
 //Подсказки при поиске
 const searchSuggestions = document.getElementsByClassName('search-suggestions')[0];
 if(searchField && searchButton){
     searchField.addEventListener('input', function() {
-        suggestQueryFittingGames();
+        suggestQueryFittingGenres();
     });
     
     searchField.addEventListener('focus', function() {
         searchSuggestions.classList.remove('search-suggestions_hidden');
-        suggestQueryFittingGames();
+        suggestQueryFittingGenres();
     });
 
     searchField.addEventListener('blur', function() {
@@ -445,28 +449,27 @@ if(searchField && searchButton){
     });
 }
 
-function suggestQueryFittingGames() {
-    const query = searchField.value;
+function suggestQueryFittingGenres(){
+    const query = searchField.value.toLowerCase();
     let suggestions = [];
-    catalogGameCardsData.forEach(game => {
-        if (suggestions.length >= 3) {
+    catalogGameGenresData.forEach(genre => {
+        if(suggestions.length >= 3){
             return;
         }
-
-        const gameTitle = game.title.toLocaleLowerCase();
-        if (gameTitle.includes(query.toLowerCase())) {
+        
+        if(genre.title.toLowerCase().includes(query)){
             suggestions.push([
                 {
-                    'title': game.title,
-                    'image': game.image,
+                    'title': genre.title,
                 }
             ]);
         }
-    });
-    renderSearchSuggestions(suggestions);
+    })
+    
+    renderGenreSearchSuggestions(suggestions);
 }
 
-function renderSearchSuggestions(suggestions) {
+function renderGenreSearchSuggestions(suggestions){
     searchSuggestions.innerHTML = "";
     suggestions.forEach(searchSuggestion => {
         searchSuggestion = searchSuggestion[0];
@@ -474,7 +477,6 @@ function renderSearchSuggestions(suggestions) {
         suggestion.className = "search-suggestion";
 
         suggestion.innerHTML = `
-            <img class="search-suggestion__game-image" src="${searchSuggestion.image}" alt="${searchSuggestion.title}">
             <h3 class="small-header">${searchSuggestion.title}</h3>
         `
 
@@ -483,7 +485,7 @@ function renderSearchSuggestions(suggestions) {
         });
 
         suggestion.addEventListener('mouseleave', function() {
-            searchField.placeholder = "Поиск по играм...";
+            searchField.placeholder = "Быстрый поиск по жанрам...";
         });
 
         suggestion.addEventListener('click', function() {
@@ -495,3 +497,4 @@ function renderSearchSuggestions(suggestions) {
         searchSuggestions.appendChild(suggestion);
     });
 }
+

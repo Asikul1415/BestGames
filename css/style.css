@@ -1202,6 +1202,10 @@ html.light-theme .burger-menu__btn-line {
         align-items: center;
     }
 
+    .burger-menu {
+        display: flex;
+    }
+
     .nav__inner{
         display: none;
     }
@@ -1248,10 +1252,6 @@ html.light-theme .burger-menu__btn-line {
     .search-suggestion{
         width: 80vw;
     }
-    
-    .burger-menu {
-        display: flex;
-    }
 
     .slider {
         width: 100%;
@@ -1276,6 +1276,10 @@ html.light-theme .burger-menu__btn-line {
 
     .filters-sidebar{
         display: none;
+    }
+
+    .filter-toggle {
+        display: flex;
     }
  
     .form-row {
@@ -1366,6 +1370,14 @@ html.light-theme .burger-menu__btn-line {
     .filters-sidebar{
         display: none;
     }
+    
+    .filter-toggle {
+        display: flex;
+    }
+
+    .catalog-layout{
+        flex-direction: column;
+    }
 
     .games-grid {
         justify-content: center;
@@ -1385,9 +1397,16 @@ html.light-theme .burger-menu__btn-line {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .nav{
-        grid-template-columns: 10vw 80vw;
-        gap: 3rem;
+    .header__inner{
+        display: block;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: unset;
+        justify-content: unset;
         width: 90vw;
     }
 
@@ -1395,13 +1414,23 @@ html.light-theme .burger-menu__btn-line {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        width: 90vw;
+        align-items: center;
     }
 
     .nav__inner{
+        display: none;
+    }
+
+    .nav__inner.active{
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        width: 70vw;
+        width: 90vw;
+    }
+
+    .burger-menu {
+        display: flex;
     }
 
     .search-box {
@@ -1427,6 +1456,12 @@ html.light-theme .burger-menu__btn-line {
         grid-template-columns: repeat(auto-fit, 20vw);
         justify-content: center;
         gap: 1rem;
+    }
+
+    .btn-login,
+    .btn-catalog{
+        width: 15vw;
+        height: 6vh;
     }
 
     .partner-image{

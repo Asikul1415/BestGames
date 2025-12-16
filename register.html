@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="./images/logo.png">
+    <link rel="icon" href="./images/logo.svg">
 </head>
 <body class="html-body auth-page">
     <header class="header">
@@ -15,7 +15,7 @@
             <div class="header__inner">
                 <nav class="nav">
                     <div class="nav__header">
-                        <a href="index.html"><img class="logo" src="images/logo.png"></a>
+                        <a href="index.html"><img class="logo" src="images/logo.svg"></a>
                         <button class="burger-menu">
                             <span class="burger-menu__btn-line"></span>
                             <span class="burger-menu__btn-line"></span>
@@ -25,15 +25,18 @@
                     <div class="nav__inner">
                         <div class="search-section">
                             <div class="search-box">
-                                <input type="search" placeholder="Быстрый поиск по жанрам..." class="search-input">
+                                <input type="search" placeholder="Быстрый поиск по жанрам..." class="search-input" id="search">
                                 <button class="search-btn">Найти</button>
                             </div>
-                            <div class="search-suggestions">
+                            <div class="search-suggestions search-suggestions_hidden">
                                 <!-- Here are search-suggestion(s) being loaded by js -->
                             </div>
                         </div>
                         <div class="nav__links">
+                            <a href="index.html" class="btn-catalog nav__link">Главная</a>
                             <a href="catalog.html" class="btn-catalog nav__link">Каталог</a>
+                            <a href="login.html" class="btn-login nav__link">Войти</a>
+                            <a href="profile.html" class="btn-login nav__link">Личный кабинет</a>
                         </div>
                     </div>    
                 </nav>               
@@ -99,7 +102,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <a href="index.html"><img class="logo" src="images/logo.png"></a>
+                    <a href="index.html"><img class="logo" src="images/logo.svg"></a>
                     <div class="footer-contact">
                         <p class="footer-contact__text"><i class="fas fa-phone footer-contact__icon"></i> 8-800-999-55-99</p>
                         <p class="footer-contact__text"><i class="fas fa-envelope footer-contact__icon"></i> best@games.ru</p>

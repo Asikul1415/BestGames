@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="./images/logo.png">
+    <link rel="icon" href="./images/logo.svg">
 </head>
 <body class="html-body">
     <header class="header">
@@ -15,7 +15,7 @@
             <div class="header__inner">
                 <nav class="nav">
                     <div class="nav__header">
-                        <a href="index.html"><img class="logo" src="images/logo.png"></a>
+                        <a href="index.html"><img class="logo" src="images/logo.svg"></a>
                         <button class="burger-menu">
                             <span class="burger-menu__btn-line"></span>
                             <span class="burger-menu__btn-line"></span>
@@ -25,16 +25,17 @@
                     <div class="nav__inner">
                         <div class="search-section">
                             <div class="search-box">
-                                <input type="search" placeholder="Быстрый поиск по жанрам..." class="search-input">
+                                <input type="search" placeholder="Быстрый поиск по жанрам..." class="search-input" id="search">
                                 <a href="catalog.html#" class="search-btn">Найти</a>
                             </div>
-                            <div class="search-suggestions">
+                            <div class="search-suggestions search-suggestions_hidden">
                                 <!-- Here are search-suggestion(s) being loaded by js -->
                             </div>
                         </div>
                         <div class="nav__links">
-                            <a href="login.html" class="btn-login nav__link">Войти</a>
                             <a href="catalog.html" class="btn-catalog nav__link">Каталог</a>
+                            <a href="login.html" class="btn-login nav__link">Войти</a>
+                            <a href="profile.html" class="btn-login nav__link">Личный кабинет</a>
                             <a href="index-light.html" class="btn-login nav__link">Светлая тема</a>
                         </div>
                     </div>    
@@ -66,7 +67,7 @@
                         </div>
                     </div>
                     <div class="slide">
-                        <img class="slide-image" src="images/oblivion.jpg" alt="The Elder Scrolls 4: Oblivion Remastered">
+                        <img class="slide-image" src="images/tes_iv_oblivion_remastered.webp" alt="The Elder Scrolls 4: Oblivion Remastered">
                         <div class="slide-content">
                             <h3 class="small-header slide-title">The Elder Scrolls 4: Oblivion Remastered</h3>
                             <p class="slide-caption">«Навеки сомкни Врата Обливиона»</p>
@@ -84,7 +85,7 @@
                         </div>
                     </div>
                     <div class="slide">
-                        <img class="slide-image" src="images/death stranding.jpeg" alt="Death Stranding 2: On the Beach">
+                        <img class="slide-image" src="images/death_stranding_2.webp" alt="Death Stranding 2: On the Beach">
                         <div class="slide-content">
                             <h3 class="small-header slide-title">Death Stranding 2: On the Beach</h3>
                             <p  class="slide-caption">«Последняя доставка — в никуда»</p>
@@ -151,22 +152,31 @@
             <div class="container">
                 <h2 class="middle-header">Наши <span class="highlight">партнёры</span></h2>
                 <div class="partners-grid">
-                    <div class="partner">
-                        <img class="partner-image" src="images/rostelekom.jpeg">
-                        <h3 class="small-header">Ростелеком</h3>
-                    </div>
-                    <div class="partner">
-                        <img class="partner-image" src="images/dom ru.jpeg">
-                        <h3 class="small-header">Дом.ру</h3>
-                    </div>
-                    <div class="partner">
-                        <img class="partner-image" src="images/provoda.jpeg">
-                        <h3 class="small-header">Provoda</h3>
-                    </div>
-                    <div class="partner">
-                        <img class="partner-image" src="images/sber.jpeg">
-                        <h3 class="small-header">Сбер</h3>
-                    </div>
+                    <a href="https://www.company.rt.ru/" class="partners__partner">
+                        <div class="partners__partner-container">
+                            <img class="partners__partner-image" src="images/rostelekom.webp">
+                            <h3 class="small-header partners__partner-header">Ростелеком</h3>
+                        </div>
+                    </a>
+                    <a href="https://msk.dom.ru/" class="partners__partner">
+                        <div class="partners__partner-container">
+                            <img class="partners__partner-image" src="images/dom ru.webp">
+                            <h3 class="small-header">Дом.ру</h3>
+                        </div>
+                    </a>
+                    <a href="https://provoda.club/" class="partners__partner">
+                        <div class="partners__partner-container">
+                            <img class="partners__partner-image" src="images/provoda.webp">
+                            <h3 class="small-header">Provoda</h3>
+                        </div>
+                    </a>
+                    
+                    <a href="https://sberbank.ru/" class="partners__partner">
+                        <div class="partners__partner-container">
+                            <img class="partners__partner-image" src="images/sber.webp">
+                            <h3 class="small-header">Сбер</h3>
+                        </div>
+                    </a>                
                 </div>
             </div>
         </section>
@@ -176,7 +186,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <a href="index.html"><img class="logo" src="images/logo.png"></a>
+                    <a href="index.html"><img class="logo" src="images/logo.svg"></a>
                     <div class="footer-contact">
                         <p class="footer-contact__text"><i class="fas fa-phone footer-contact__icon"></i> 8-800-999-55-99</p>
                         <p class="footer-contact__text"><i class="fas fa-envelope footer-contact__icon"></i> best@games.ru</p>

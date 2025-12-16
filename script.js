@@ -6,7 +6,7 @@ const catalogGameCardsData = [
         developer: "Valve",
         price: "Бесплатно",
         rating: "★★★★☆",
-        image: "images/cs2.jpg",
+        image: "images/cs2.webp",
         isFree: true,
         online: 591628,
     },
@@ -28,7 +28,7 @@ const catalogGameCardsData = [
         developer: "EA DICE",
         price: "6 999,00 ₽",
         rating: "★★★★★",
-        image: "images/battlefield6.jpeg",
+        image: "images/battlefield6.webp",
         isFree: false,
         online: 99517,
     },
@@ -39,7 +39,7 @@ const catalogGameCardsData = [
         developer: "Treyarch",
         price: "6 999,00 ₽",
         rating: "★★★★★",
-        image: "images/call of duty black ops 6.jpeg",
+        image: "images/call-of-duty_black_ops_6.webp",
         isFree: false,
         online: 47046,
     },
@@ -50,7 +50,7 @@ const catalogGameCardsData = [
         developer: "Playground Games",
         price: "6 999,00 ₽",
         rating: "★★★★★",
-        image: "images/fh 5.jpeg",
+        image: "images/fh_5.webp",
         isFree: false,
         online: 7146,
     },
@@ -61,7 +61,7 @@ const catalogGameCardsData = [
         developer: "BeamNG GmbH",
         price: "6 999,00 ₽",
         rating: "★★★★★",
-        image: "images/BeamNG drive.jpeg",
+        image: "images/beamNG_drive.webp",
         isFree: false,
         online: 18524,
     },
@@ -72,7 +72,7 @@ const catalogGameCardsData = [
         developer: "Firaxis Games",
         price: "5 600 ₽",
         rating: "★★★★★",
-        image: "images/civilization 7.jpeg",
+        image: "images/civilization_VI.webp",
         isFree: false,
         online: 7146,
     },
@@ -83,7 +83,7 @@ const catalogGameCardsData = [
         developer: "Paradox Development Studio",
         price: "639 ₽",
         rating: "★★★★★",
-        image: "images/hoi4.jpeg",
+        image: "images/hoi4.webp",
         isFree: false,
         online: 22787,
     },
@@ -94,7 +94,7 @@ const catalogGameCardsData = [
         developer: "Paradox Development Studio",
         price: "5 600 ₽",
         rating: "★★★★★",
-        image: "images/Europe Universalis V.jpeg",
+        image: "images/europe_universalis_V.webp",
         isFree: false,
         online: 13782,
     },
@@ -105,7 +105,7 @@ const catalogGameCardsData = [
         developer: "Bethesda Game Studios",
         price: "3 200 ₽",
         rating: "★★★★★",
-        image: "images/skyrim se.webp",
+        image: "images/tes_V_skyrim_SE.webp",
         isFree: false,
         online: 23309,
     }
@@ -158,13 +158,11 @@ function renderGameCards(gameCards) {
                     <div class="game-title">
                         <h3 class="small-header">${game.title}</h3>
                     </div>
-                    <p class="game-caption">${game.genre}</p>
-                    <p class="game-caption">${game.developer}</p>
-                    <div class="game-footer">
-                        <span class="${game.isFree ? 'price free' : 'price'}">${gamePrice}</span>
-                        <span class="rating">${game.rating}</span>
-                        <a href="catalog.html" class="slide-btn">Подробнее</a>
-                    </div>
+                    <p class="game-caption"><span>Жанры: </span><span class="highlight">${game.genre}</span></p>
+                    <p class="game-caption">Разработчик: <span class="highlight">${game.developer}</span></p>
+                    <p class="game-caption">Цена: <span class="${game.isFree ? 'price free' : 'price'}">${gamePrice}</span></p>
+                    <p class="game-caption">Рейтинг: <span class="highlight">${game.rating}</span></p>
+                    <a href="catalog.html" class="slide-btn">Подробнее</a>
                 </div>
             `
 

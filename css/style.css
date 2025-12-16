@@ -63,7 +63,10 @@
 .logo {
     width: 5vw;
     height: 100%;
-    text-decoration: none;
+}
+
+.logo:hover {
+    transform: scale(1.15);
 }
 
 .nav {
@@ -246,6 +249,7 @@
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s;
+    text-align: center;
 }
 
 .slide-btn:hover {
@@ -331,6 +335,11 @@
     border-radius: 6px;
     color: var(--light);
     font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.search-input:hover{
+    background-color: var(--light-gray);
 }
 
 .search-btn {
@@ -345,6 +354,11 @@
     font-weight: 600;
     cursor: pointer;
     text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.search-btn:hover{
+    transform: translateY(-5%);
 }
 
 .search-suggestions{
@@ -396,6 +410,7 @@
 
 .game-card {
     background: var(--gray);
+    color: #aaa;
     padding: min(2rem, 4vw);
     border-radius: 8px;
     overflow: hidden;
@@ -418,25 +433,34 @@
     object-fit: cover;
 }
 
+.game-info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem
+}
+
 .game-title {
-    min-height: 8vh;
+    height: 3rem;
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--light);
 }
 
 .game-caption {
+    display: flex;
+    flex-direction: column;
+    height: 3rem;
     color: #aaa;
     font-size: 1rem;
     font-weight: 500;
-    margin-bottom: 1rem;
 }
 
 .game-footer {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 0.25em;
+    margin-bottom: 0.5rem;
 }
 
 .price {
@@ -492,7 +516,17 @@
     justify-content: space-evenly;
 }
 
-.partner{
+.partners__partner{
+    text-decoration: none;
+    color: var(--accent);
+    transition: transform 0.3s ease;
+}
+
+.partners__partner:hover{
+    transform: translateY(-5%);
+}
+
+.partners__partner-container{
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -502,7 +536,7 @@
     align-items: center;
 }
 
-.partner-image {
+.partners__partner-image {
     width: min(10vw, 150px);
     height: min(15vh, 120px);
     object-fit: cover;
@@ -1322,15 +1356,11 @@ html.light-theme .burger-menu__btn-line {
         padding: 1rem;
     }
 
-    /* .search-suggestion {
-        width: 100%;
-    } */
-
     .partners-grid {
         grid-template-columns: 1fr;
     }
     
-    .partner-image {
+    .partners__partner-image {
         width: 55vw;
         height: 20vh;
     }
@@ -1354,7 +1384,7 @@ html.light-theme .burger-menu__btn-line {
 }
 
 /* Планшетная адаптивность (768px - 1679px) */
-@media (min-width: 768px) and (max-width: 1679px) {
+@media (min-width: 768px) and (max-width: 1365px) {
     .logo{
         width: 10vw;
     }
@@ -1381,7 +1411,7 @@ html.light-theme .burger-menu__btn-line {
 
     .games-grid {
         justify-content: center;
-        grid-template-columns: repeat(auto-fit, 28vw);
+        grid-template-columns: repeat(auto-fit, 40vw);
         width: 100%;
     }
 
@@ -1464,7 +1494,7 @@ html.light-theme .burger-menu__btn-line {
         height: 6vh;
     }
 
-    .partner-image{
+    .partners__partner-image{
         width: 20vw;
         height: 100%;
     }
@@ -1490,7 +1520,7 @@ html.light-theme .burger-menu__btn-line {
 }
 
 /* Десктопная адаптивность (выше 1920px) */
-@media (min-width: 1680px) {
+@media (min-width: 1366px) {
     .big-header {
         font-size: 3rem;
     }

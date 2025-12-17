@@ -6,10 +6,6 @@
     --light: #f5f5f5;
     --accent: #FFD700; 
     --accent-dark: #FFA500;
-
-    /* Базовые размеры для масштабирования */
-    --base-size: 16px;
-    --scale: 1;
 }
 
 .html-body {
@@ -17,7 +13,8 @@
     background: var(--dark);
     color: var(--light);
     line-height: 1.5;
-    font-size: calc(var(--base-size) * var(--scale));
+    font-size: 16px;
+    margin: 0;
 }
 
 .container {
@@ -30,6 +27,7 @@
     font-size: calc(2rem + 0.5vw);
     font-weight: 600;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .middle-header{
@@ -49,10 +47,11 @@
 
 .header {
     background: var(--gray);
-    padding: 1rem 0;
+    padding: 1rem;
     position: sticky;
     top: 0;
     z-index: 100;
+    border-bottom: 2px solid var(--accent);
 }
 
 .header__inner {
@@ -139,13 +138,15 @@
     background: var(--light);
 }
 
-.hero {
-    padding: 4rem 0;
-    text-align: center;
-    background: linear-gradient(135deg, var(--dark) 0%, var(--gray) 100%);
+.introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+    background: var(--dark);
 }
 
-.hero-slogan {
+.introduction-slogan {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     color: #aaa;
@@ -167,20 +168,20 @@
 }
 
 .slider-section {
-    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
     background: var(--gray);
 }
 
 .slider-section__header-text{
-    text-align: center;
     margin-bottom: 2rem;
 }
 
 .slider {
     position: relative;
     width: 50vw;
-    margin: 0 auto;
-    overflow: hidden;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
@@ -213,7 +214,6 @@
     right: 0;
     background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
     padding: 2rem;
-    color: white;
 }
 
 .slide-title { 
@@ -225,7 +225,6 @@
 .slide-caption {
     font-size: 1rem;
     color: #ddd;
-    margin-bottom: 1rem;
 }
 
 .slide-price {
@@ -241,10 +240,9 @@
 
 .slide-btn {
     display: inline-block;
-    background: transparent;
-    color: white;
+    color: var(--accent);
     border: 2px solid white;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem;
     border-radius: 4px;
     text-decoration: none;
     font-weight: 500;
@@ -261,7 +259,6 @@
 .slider-next {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     background: rgba(255, 215, 0, 0.2);
     border: none;
     color: white;
@@ -271,9 +268,6 @@
     font-size: 1.2rem;
     cursor: pointer;
     transition: all 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .slider-prev:hover,
@@ -322,18 +316,16 @@
 
 .search-box {
     width: 30vw;
-    margin: 0 auto;
     display: flex;
     gap: 10px;
 }
 
 .search-input {
     width: 70%;
-    padding: min(1rem, 2vw);
+    padding-left: 1rem;
     background: var(--dark);
     border: 2px solid #444;
     border-radius: 6px;
-    color: var(--light);
     font-size: 1rem;
     transition: background-color 0.3s ease;
 }
@@ -346,7 +338,7 @@
     background: var(--accent);
     color: var(--dark);
     border: none;
-    width: 7vw;
+    width: 20%;
     height: 3.3rem;
     text-align: center;
     align-content: center;
@@ -398,7 +390,7 @@
 }
 
 .games {
-    padding: 4rem 0;
+    padding: 4rem;
 }
 
 .games-grid {
@@ -411,7 +403,7 @@
 .game-card {
     background: var(--gray);
     color: #aaa;
-    padding: min(2rem, 4vw);
+    padding: 10%;
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s;
@@ -430,6 +422,7 @@
 .game-image {
     width: 100%;
     height: 35rem;
+    border-radius: 5%;
     object-fit: cover;
 }
 
@@ -440,7 +433,7 @@
 }
 
 .game-title {
-    height: 3rem;
+    height: 5rem;
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--light);
@@ -453,14 +446,6 @@
     color: #aaa;
     font-size: 1rem;
     font-weight: 500;
-}
-
-.game-footer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.25em;
-    margin-bottom: 0.5rem;
 }
 
 .price {
@@ -477,14 +462,14 @@
 }
 
 .features {
-    padding: 4rem 0;
+    padding: 4rem;
     background: var(--gray);
 }
 
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(200px, 90vw), 1fr));
-    gap: min(2rem, 4vw);
+    gap: 2rem;
 }
 
 .feature {
@@ -496,12 +481,7 @@
 
 .feature-icon{
     font-size: 2.5rem;
-    margin-bottom: 1rem;
     color: var(--accent);
-}
-
-.feature-title{
-    margin-bottom: 0.5rem;
 }
 
 .feature-caption{
@@ -509,11 +489,14 @@
     font-size: 0.9rem;
 }
 
+.partners{
+    padding: 0 4rem;
+}
+
 .partners-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
-    justify-content: space-evenly;
 }
 
 .partners__partner{
@@ -531,7 +514,7 @@
     flex-direction: column;
     gap: 30px;
     background-color: var(--gray);
-    padding: 20px;
+    padding: 1rem;
     border-radius: 8px;
     align-items: center;
 }
@@ -544,15 +527,15 @@
 }
 
 .footer {
-    margin-top: min(3rem, 6vh);
+    margin-top: 4rem;
     background: var(--gray);
-    padding: min(3rem, 6vh) 0 min(1rem, 2vh);
+    padding: 1rem 4rem;
 }
 
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(200px, 45vw), 1fr));
-    gap: min(2rem, 4vw);
+    gap: 2rem;
     margin-bottom: 2rem;
 }
 
@@ -560,15 +543,6 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-}
-
-.footer-logo {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: var(--accent);
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
 }
 
 .footer-title{
@@ -597,9 +571,6 @@
 }
 
 .footer-contact {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
     margin-top: 1rem;
 }
 
@@ -613,37 +584,27 @@
 
 .footer-contact__icon {
     color: var(--accent);
-    width: 16px;
 }
 
 .footer-bottom {
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 1rem;
     border-top: 1px solid #444;
     color: #777;
-    font-size: 0.9rem;
 }
 
 /* Общие стили для страниц авторизации */
-.auth-page .main {
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-}
 
 .auth-container {
-    max-width: min(560px, 90vw);
-    margin: 0 auto;
-    margin-top: 2rem;
-    padding: min(2rem, 4vw);
+    max-width: 30%;
+    margin: 2rem auto;
+    padding: 2rem;
     background: var(--gray);
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .auth-container__header {
     text-align: center;
-    margin-bottom: 0.5rem;
 }
 
 .subtitle {
@@ -717,7 +678,7 @@
     background: var(--accent);
     color: var(--dark);
     border: none;
-    padding: min(0.8rem, 1.5vw) min(1.5rem, 3vw);
+    padding: 1rem;
     border-radius: 6px;
     font-weight: 600;
     font-size: 1rem;
@@ -753,16 +714,6 @@
     margin-bottom: 2rem;
 }
 
-.profile__exit-btn{
-    width: 10vw;
-    color: var(--light);
-    background: transparent;
-    border: 1px solid var(--light);
-    border-radius: 4px;
-    text-align: center;
-    align-content: center;
-}
-
 .profile-content {
     display: flex;
     flex-direction: column;
@@ -776,10 +727,6 @@
 }
 
 .middle-header_profile {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
     color: var(--accent);
 }
 
@@ -812,6 +759,7 @@
 
 .table-row {
     display: flex;
+    gap: 1rem;
     padding: 1rem;
     background: var(--dark);
     border-radius: 6px;
@@ -839,10 +787,6 @@
     padding: 1rem;
     border-radius: 6px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
     transition: all 0.3s;
 }
 
@@ -873,6 +817,7 @@
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s;
+    text-decoration: none;
 }
 
 .theme-btn.active {
@@ -883,22 +828,6 @@
 
 
 /* Каталог */
-.catalog-container{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.catalog-actions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 4.5vw;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
 .catalog-header{
     justify-items: center;
 }
@@ -924,12 +853,11 @@
 .filters-sidebar {
     position: sticky;
     top: 10%;
-    flex: 0 0 min(250px, 30vw);
     background: var(--gray);
     padding: 1.5rem;
     border-radius: 8px;
     height: fit-content;
-    width: 30%;
+    width: 20%;
 }
 
 .filter-group {
@@ -940,39 +868,17 @@
 }
 
 .filter-checkbox {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
     cursor: pointer;
 }
 
 .btn-apply {
     width: 100%;
     background: var(--accent);
-    color: var(--dark);
     border: none;
     padding: 0.8rem;
     border-radius: 6px;
     font-weight: 600;
     cursor: pointer;
-}
-
-.btn-game {
-    display: block;
-    text-align: center;
-    background: transparent;
-    border: 2px solid var(--accent);
-    color: var(--accent);
-    padding: 0.6rem;
-    border-radius: 6px;
-    text-decoration: none;
-    margin-top: 1rem;
-    transition: all 0.3s;
-}
-
-.btn-game:hover {
-    background: var(--accent);
-    color: var(--dark);
 }
 
 
@@ -991,23 +897,3 @@
 .admin-header{
     text-align: center;
 }
-
-.btn-admin {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    width: 100%;
-}
-
-.admin__return-btn{
-    color: var(--dark);
-    font-weight: 600;
-    background-color: var(--accent);
-    padding: 10px;
-    border-radius: 8px;
-    text-align: center;
-    align-content: center;
-}
-
-

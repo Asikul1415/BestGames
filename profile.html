@@ -12,35 +12,33 @@
 </head>
 <body class="html-body">
     <header class="header">
-        <div class="container">
-            <div class="header__inner">
-                <nav class="nav">
-                    <div class="nav__header">
-                        <a href="index.html"><img class="logo" src="images/logo.svg"></a>
-                        <button class="burger-menu">
-                            <span class="burger-menu__btn-line"></span>
-                            <span class="burger-menu__btn-line"></span>
-                            <span class="burger-menu__btn-line"></span>
-                        </button>
+        <div class="header__inner">
+            <nav class="nav">
+                <div class="nav__header">
+                    <a href="index.html"><img class="logo" src="images/logo.svg"></a>
+                    <button class="burger-menu">
+                        <span class="burger-menu__btn-line"></span>
+                        <span class="burger-menu__btn-line"></span>
+                        <span class="burger-menu__btn-line"></span>
+                    </button>
+                </div>
+                <div class="nav__inner">
+                    <div class="search-section">
+                        <div class="search-box">
+                            <input type="search" placeholder="Быстрый поиск по жанрам..." class="search-input" id="search">
+                            <button class="search-btn">Найти</button>
+                        </div>
+                        <div class="search-suggestions search-suggestions_hidden">
+                            <!-- Here are search-suggestion(s) being loaded by js -->
+                        </div>
                     </div>
-                    <div class="nav__inner">
-                        <div class="search-section">
-                            <div class="search-box">
-                                <input type="search" placeholder="Быстрый поиск по жанрам..." class="search-input" id="search">
-                                <button class="search-btn">Найти</button>
-                            </div>
-                            <div class="search-suggestions search-suggestions_hidden">
-                                <!-- Here are search-suggestion(s) being loaded by js -->
-                            </div>
-                        </div>
-                        <div class="nav__links">
-                            <a href="index.html" class="btn-catalog nav__link">Главная</a>
-                            <a href="catalog.html" class="btn-catalog nav__link">Каталог</a>
-                            <a href="index.html" class="profile__exit-btn nav__link">Выйти</a>
-                        </div>
-                    </div>    
-                </nav>               
-            </div>
+                    <div class="nav__links">
+                        <a href="index.html" class="btn-catalog nav__link">Главная</a>
+                        <a href="catalog.html" class="btn-catalog nav__link">Каталог</a>
+                        <a href="index.html" class="btn-login nav__link">Выйти</a>
+                    </div>
+                </div>    
+            </nav>               
         </div>
     </header>
     
@@ -119,56 +117,54 @@
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <a href="index.html"><img class="logo" src="images/logo.svg"></a>
-                    <div class="footer-contact">
-                        <p class="footer-contact__text"><i class="fas fa-phone footer-contact__icon"></i> 8-800-999-55-99</p>
-                        <p class="footer-contact__text"><i class="fas fa-envelope footer-contact__icon"></i> best@games.ru</p>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 class="footer-title">Клиентам</h4>
-                    <div class="footer-links">
-                        <a class="footer-link" href="catalog.html">Каталог игр</a>
-                        <a class="footer-link" href="#">Акции</a>
-                        <a class="footer-link" href="#">Бонусная программа</a>
-                        <a class="footer-link" href="#">Помощь</a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 class="footer-title">Партнерам</h4>
-                    <div class="footer-links">
-                        <a class="footer-link" href="#">Сотрудничество</a>
-                        <a class="footer-link" href="#">Размещение рекламы</a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 class="footer-title">О нас</h4>
-                    <div class="footer-links">
-                        <a class="footer-link" href="#">О компании</a>
-                        <a class="footer-link" href="#">Контакты</a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 class="footer-title">Навигация</h4>
-                    <div class="footer-links">
-                        <a class="footer-link" href="index.html">Главная</a>
-                        <a class="footer-link" href="register.html">Регистрация</a>
-                        <a class="footer-link" href="login.html">Авторизация</a>
-                        <a class="footer-link" href="profile.html">Личный кабинет</a>
-                        <a class="footer-link" href="#search" class="search-link">Поиск</a>
-                    </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <a href="index.html"><img class="logo" src="images/logo.svg"></a>
+                <div class="footer-contact">
+                    <p class="footer-contact__text"><i class="fas fa-phone footer-contact__icon"></i> 8-800-999-55-99</p>
+                    <p class="footer-contact__text"><i class="fas fa-envelope footer-contact__icon"></i> best@games.ru</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>© 2025 BestGames. Все права защищены.</p>
+            
+            <div class="footer-section">
+                <h4 class="footer-title">Клиентам</h4>
+                <div class="footer-links">
+                    <a class="footer-link" href="catalog.html">Каталог игр</a>
+                    <a class="footer-link" href="#">Акции</a>
+                    <a class="footer-link" href="#">Бонусная программа</a>
+                    <a class="footer-link" href="#">Помощь</a>
+                </div>
             </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-title">Партнерам</h4>
+                <div class="footer-links">
+                    <a class="footer-link" href="#">Сотрудничество</a>
+                    <a class="footer-link" href="#">Размещение рекламы</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-title">О нас</h4>
+                <div class="footer-links">
+                    <a class="footer-link" href="#">О компании</a>
+                    <a class="footer-link" href="#">Контакты</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-title">Навигация</h4>
+                <div class="footer-links">
+                    <a class="footer-link" href="index.html">Главная</a>
+                    <a class="footer-link" href="register.html">Регистрация</a>
+                    <a class="footer-link" href="login.html">Авторизация</a>
+                    <a class="footer-link" href="profile.html">Личный кабинет</a>
+                    <a class="footer-link" href="#search" class="search-link">Поиск</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 BestGames. Все права защищены.</p>
         </div>
     </footer>
 

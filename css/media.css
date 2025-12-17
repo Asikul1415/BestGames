@@ -59,9 +59,7 @@
     }
 
     .btn-catalog,
-    .btn-login,
-    .profile__exit-btn,
-    .admin__return-btn{
+    .btn-login{
         width: 25vw;
         height: 7vh;
     }
@@ -136,11 +134,6 @@
         flex-direction: column;
     }
     
-    .filters-sidebar {
-        position: static;
-        margin-bottom: 1.5rem;
-    }
-
     .profile-content {
         gap: 1rem;
     }
@@ -171,7 +164,7 @@
         gap: 1rem;
     }
 
-    .hero {
+    .introduction {
         padding: 2rem 0;
     }
     

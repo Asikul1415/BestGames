@@ -6,234 +6,220 @@
     <title>BestGames | Игры</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="./images/logo.svg">
 </head>
 <body class="html-body">
     <header class="header">
-        <div class="container">
-            <div class="header__inner">
-                <nav class="nav">
-                    <div class="nav__header">
-                        <a href="index.html"><img class="logo" src="images/logo.svg"></a>
-                        <button class="burger-menu">
-                            <span class="burger-menu__btn-line"></span>
-                            <span class="burger-menu__btn-line"></span>
-                            <span class="burger-menu__btn-line"></span>
-                        </button>
+        <div class="header__inner">
+            <nav class="nav">
+                <div class="nav__header">
+                    <a href="index.html"><img class="logo" src="images/logo.svg"></a>
+                    <button class="burger-menu">
+                        <span class="burger-menu__btn-line"></span>
+                        <span class="burger-menu__btn-line"></span>
+                        <span class="burger-menu__btn-line"></span>
+                    </button>
+                </div>
+                <div class="nav__inner">
+                    <div class="search-section">
+                        <div class="search-box">
+                            <input type="search" placeholder="Быстрый поиск по жанрам..." class="search-input" id="search">
+                            <a href="catalog.html#" class="search-btn">Найти</a>
+                        </div>
+                        <div class="search-suggestions search-suggestions_hidden">
+                            <!-- Here are search-suggestion(s) being loaded by js -->
+                        </div>
                     </div>
-                    <div class="nav__inner">
-                        <div class="search-section">
-                            <div class="search-box">
-                                <input type="search" placeholder="Быстрый поиск по жанрам..." class="search-input" id="search">
-                                <a href="catalog.html#" class="search-btn">Найти</a>
-                            </div>
-                            <div class="search-suggestions search-suggestions_hidden">
-                                <!-- Here are search-suggestion(s) being loaded by js -->
-                            </div>
-                        </div>
-                        <div class="nav__links">
-                            <a href="catalog.html" class="btn-catalog nav__link">Каталог</a>
-                            <a href="login.html" class="btn-login nav__link">Войти</a>
-                            <a href="profile.html" class="btn-login nav__link">Личный кабинет</a>
-                            <a href="index-light.html" class="btn-login nav__link">Светлая тема</a>
-                        </div>
-                    </div>    
-                </nav>               
-            </div>
+                    <div class="nav__links">
+                        <a href="catalog.html" class="btn-catalog nav__link">Каталог</a>
+                        <a href="login.html" class="btn-login nav__link">Войти</a>
+                        <a href="profile.html" class="btn-login nav__link">Личный кабинет</a>
+                        <a href="index-light.html" class="btn-login nav__link">Светлая тема</a>
+                    </div>
+                </div>    
+            </nav>               
         </div>
     </header>
 
     <main class="main">
-        <section class="hero">
-            <div class="container">
-                <h1 class="big-header">Игры для <span class="highlight">настоящих</span> геймеров</h1>
-                <p class="hero-slogan">Покупай, играй, побеждай</p>
-                <a href="catalog.html" class="btn-hero">Смотреть игры →</a>
-            </div>
+        <section class="introduction">
+            <h1 class="big-header">Игры для <span class="highlight">настоящих</span> геймеров</h1>
+            <p class="introduction-slogan">Покупай, играй, побеждай</p>
+            <a href="catalog.html" class="btn-hero">Смотреть игры →</a>
         </section>
 
         <section class="slider-section">
-            <div class="container">
-                <h2 class="middle-header slider-section__header-text">Новинки <span class="highlight">игр</span></h2>
-                <div class="slider">
-                    <div class="slide active">
-                        <img class="slide-image" src="images/games/clair obscur.webp" alt="Clair Obscur: Expedition 33">
-                        <div class="slide-content">
-                            <h3 class="small-header slide-title">Clair Obscur: Expedition 33</h3>
-                            <p class="slide-caption">«Завтра наступило»</p>
-                            <div class="slide-price">1 949 ₽</div>
-                            <a href="catalog.html" class="slide-btn">Подробнее</a>
-                        </div>
+            <h2 class="middle-header slider-section__header-text">Новинки <span class="highlight">игр</span></h2>
+            <div class="slider">
+                <div class="slide active">
+                    <img class="slide-image" src="images/games/clair obscur.webp" alt="Clair Obscur: Expedition 33">
+                    <div class="slide-content">
+                        <h3 class="small-header slide-title">Clair Obscur: Expedition 33</h3>
+                        <p class="slide-caption">«Завтра наступило»</p>
+                        <div class="slide-price">1 949 ₽</div>
+                        <a href="catalog.html" class="slide-btn">Подробнее</a>
                     </div>
-                    <div class="slide">
-                        <img class="slide-image" src="images/games/tes_iv_oblivion_remastered.webp" alt="The Elder Scrolls 4: Oblivion Remastered">
-                        <div class="slide-content">
-                            <h3 class="small-header slide-title">The Elder Scrolls 4: Oblivion Remastered</h3>
-                            <p class="slide-caption">«Навеки сомкни Врата Обливиона»</p>
-                            <div class="slide-price">3 499 ₽</div>
-                            <a href="catalog.html" class="slide-btn">Подробнее</a>
-                        </div>
+                </div>
+                <div class="slide">
+                    <img class="slide-image" src="images/games/tes_iv_oblivion_remastered.webp" alt="The Elder Scrolls 4: Oblivion Remastered">
+                    <div class="slide-content">
+                        <h3 class="small-header slide-title">The Elder Scrolls 4: Oblivion Remastered</h3>
+                        <p class="slide-caption">«Навеки сомкни Врата Обливиона»</p>
+                        <div class="slide-price">3 499 ₽</div>
+                        <a href="catalog.html" class="slide-btn">Подробнее</a>
                     </div>
-                    <div class="slide">
-                        <img class="slide-image" src="images/games/dying light 2.webp" alt="Dying Light: The Beast">
-                        <div class="slide-content">
-                            <h3 class="small-header slide-title">Dying Light: The Beast</h3>
-                            <p  class="slide-caption">«Выпусти зверя наружу»</p>
-                            <div class="slide-price">4 299 ₽</div>
-                            <a href="catalog.html" class="slide-btn">Подробнее</a>
-                        </div>
+                </div>
+                <div class="slide">
+                    <img class="slide-image" src="images/games/dying light 2.webp" alt="Dying Light: The Beast">
+                    <div class="slide-content">
+                        <h3 class="small-header slide-title">Dying Light: The Beast</h3>
+                        <p  class="slide-caption">«Выпусти зверя наружу»</p>
+                        <div class="slide-price">4 299 ₽</div>
+                        <a href="catalog.html" class="slide-btn">Подробнее</a>
                     </div>
-                    <div class="slide">
-                        <img class="slide-image" src="images/games/death_stranding_2.webp" alt="Death Stranding 2: On the Beach">
-                        <div class="slide-content">
-                            <h3 class="small-header slide-title">Death Stranding 2: On the Beach</h3>
-                            <p  class="slide-caption">«Последняя доставка — в никуда»</p>
-                            <div class="slide-price">3 999 ₽</div>
-                            <a href="catalog.html" class="slide-btn">Подробнее</a>
-                        </div>
+                </div>
+                <div class="slide">
+                    <img class="slide-image" src="images/games/death_stranding_2.webp" alt="Death Stranding 2: On the Beach">
+                    <div class="slide-content">
+                        <h3 class="small-header slide-title">Death Stranding 2: On the Beach</h3>
+                        <p  class="slide-caption">«Последняя доставка — в никуда»</p>
+                        <div class="slide-price">3 999 ₽</div>
+                        <a href="catalog.html" class="slide-btn">Подробнее</a>
                     </div>
-                    
-                    <button class="slider-prev">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button class="slider-next">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                    
-                    <div class="slider-dots">
-                        <span class="dot active" data-slide="0"></span>
-                        <span class="dot" data-slide="1"></span>
-                        <span class="dot" data-slide="2"></span>
-                        <span class="dot" data-slide="3"></span>
-                    </div>
+                </div>
+                
+                <button class="slider-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="slider-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
                 </div>
             </div>
         </section>
 
         <section class="games">
-            <div class="container">
-                <h2 class="middle-header">Популярное <span class="highlight">сейчас</span></h2>
-                <div class="games-grid">
-                    <!-- There are game-card being loaded from js -->
-                </div>
+            <h2 class="middle-header">Популярное <span class="highlight">сейчас</span></h2>
+            <div class="games-grid">
+                <!-- There are game-card being loaded from js -->
             </div>
         </section>
 
         <section class="features">
-            <div class="container">
-                <h2 class="middle-header">Почему <span class="highlight">мы</span>?</h2>
-                <div class="features-grid">
-                    <div class="feature">
-                        <div class="feature-icon">$</div>
-                        <h3 class="small-header feature-title">Низкие цены</h3>
-                        <p class="feature-caption">Одни из нижайших цен на рынке</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">💸</div>
-                        <h3 class="small-header feature-title">Ежемесячные акции</h3>
-                        <p class="feature-caption">Каждый месяц получайте до 60% выгоды</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">🎧</div>
-                        <h3 class="small-header feature-title">Поддержка 24/7</h3>
-                        <p class="feature-caption">Поможем решить любые вопросы</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">⚡</div>
-                        <h3 class="small-header feature-title">Скорость</h3>
-                        <p class="feature-caption">Ключи сразу после оплаты</p>
-                    </div>
+            <h2 class="middle-header">Почему <span class="highlight">мы</span>?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">$</div>
+                    <h3 class="small-header feature-title">Низкие цены</h3>
+                    <p class="feature-caption">Одни из нижайших цен на рынке</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💸</div>
+                    <h3 class="small-header feature-title">Ежемесячные акции</h3>
+                    <p class="feature-caption">Каждый месяц получайте до 60% выгоды</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎧</div>
+                    <h3 class="small-header feature-title">Поддержка 24/7</h3>
+                    <p class="feature-caption">Поможем решить любые вопросы</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="small-header feature-title">Скорость</h3>
+                    <p class="feature-caption">Ключи сразу после оплаты</p>
                 </div>
             </div>
         </section>
 
         <section class="partners">
-            <div class="container">
-                <h2 class="middle-header">Наши <span class="highlight">партнёры</span></h2>
-                <div class="partners-grid">
-                    <a href="https://www.company.rt.ru/" class="partners__partner">
-                        <div class="partners__partner-container">
-                            <img class="partners__partner-image" src="images/partners/rostelekom.webp">
-                            <h3 class="small-header partners__partner-header">Ростелеком</h3>
-                        </div>
-                    </a>
-                    <a href="https://msk.dom.ru/" class="partners__partner">
-                        <div class="partners__partner-container">
-                            <img class="partners__partner-image" src="images/partners/dom ru.webp">
-                            <h3 class="small-header">Дом.ру</h3>
-                        </div>
-                    </a>
-                    <a href="https://provoda.club/" class="partners__partner">
-                        <div class="partners__partner-container">
-                            <img class="partners__partner-image" src="images/partners/provoda.webp">
-                            <h3 class="small-header">Provoda</h3>
-                        </div>
-                    </a>
-                    
-                    <a href="https://sberbank.ru/" class="partners__partner">
-                        <div class="partners__partner-container">
-                            <img class="partners__partner-image" src="images/partners/sber.webp">
-                            <h3 class="small-header">Сбер</h3>
-                        </div>
-                    </a>                
-                </div>
+            <h2 class="middle-header">Наши <span class="highlight">партнёры</span></h2>
+            <div class="partners-grid">
+                <a href="https://www.company.rt.ru/" class="partners__partner">
+                    <div class="partners__partner-container">
+                        <img class="partners__partner-image" src="images/partners/rostelekom.webp">
+                        <h3 class="small-header partners__partner-header">Ростелеком</h3>
+                    </div>
+                </a>
+                <a href="https://msk.dom.ru/" class="partners__partner">
+                    <div class="partners__partner-container">
+                        <img class="partners__partner-image" src="images/partners/dom ru.webp">
+                        <h3 class="small-header">Дом.ру</h3>
+                    </div>
+                </a>
+                <a href="https://provoda.club/" class="partners__partner">
+                    <div class="partners__partner-container">
+                        <img class="partners__partner-image" src="images/partners/provoda.webp">
+                        <h3 class="small-header">Provoda</h3>
+                    </div>
+                </a>
+                
+                <a href="https://sberbank.ru/" class="partners__partner">
+                    <div class="partners__partner-container">
+                        <img class="partners__partner-image" src="images/partners/sber.webp">
+                        <h3 class="small-header">Сбер</h3>
+                    </div>
+                </a>                
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <a href="index.html"><img class="logo" src="images/logo.svg"></a>
-                    <div class="footer-contact">
-                        <p class="footer-contact__text"><i class="fas fa-phone footer-contact__icon"></i> 8-800-999-55-99</p>
-                        <p class="footer-contact__text"><i class="fas fa-envelope footer-contact__icon"></i> best@games.ru</p>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 class="footer-title">Клиентам</h4>
-                    <div class="footer-links">
-                        <a class="footer-link" href="catalog.html">Каталог игр</a>
-                        <a class="footer-link" href="#">Акции</a>
-                        <a class="footer-link" href="#">Бонусная программа</a>
-                        <a class="footer-link" href="#">Помощь</a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 class="footer-title">Партнерам</h4>
-                    <div class="footer-links">
-                        <a class="footer-link" href="#">Сотрудничество</a>
-                        <a class="footer-link" href="#">Размещение рекламы</a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 class="footer-title">О нас</h4>
-                    <div class="footer-links">
-                        <a class="footer-link" href="#">О компании</a>
-                        <a class="footer-link" href="#">Контакты</a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 class="footer-title">Навигация</h4>
-                    <div class="footer-links">
-                        <a class="footer-link" href="index.html">Главная</a>
-                        <a class="footer-link" href="register.html">Регистрация</a>
-                        <a class="footer-link" href="login.html">Авторизация</a>
-                        <a class="footer-link" href="profile.html">Личный кабинет</a>
-                        <a class="footer-link" href="#search" class="search-link">Поиск</a>
-                    </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <a href="index.html"><img class="logo" src="images/logo.svg"></a>
+                <div class="footer-contact">
+                    <p class="footer-contact__text"><i class="fas fa-phone footer-contact__icon"></i> 8-800-999-55-99</p>
+                    <p class="footer-contact__text"><i class="fas fa-envelope footer-contact__icon"></i> best@games.ru</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>© 2025 BestGames. Все права защищены.</p>
+            
+            <div class="footer-section">
+                <h4 class="footer-title">Клиентам</h4>
+                <div class="footer-links">
+                    <a class="footer-link" href="catalog.html">Каталог игр</a>
+                    <a class="footer-link" href="#">Акции</a>
+                    <a class="footer-link" href="#">Бонусная программа</a>
+                    <a class="footer-link" href="#">Помощь</a>
+                </div>
             </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-title">Партнерам</h4>
+                <div class="footer-links">
+                    <a class="footer-link" href="#">Сотрудничество</a>
+                    <a class="footer-link" href="#">Размещение рекламы</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-title">О нас</h4>
+                <div class="footer-links">
+                    <a class="footer-link" href="#">О компании</a>
+                    <a class="footer-link" href="#">Контакты</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-title">Навигация</h4>
+                <div class="footer-links">
+                    <a class="footer-link" href="index.html">Главная</a>
+                    <a class="footer-link" href="register.html">Регистрация</a>
+                    <a class="footer-link" href="login.html">Авторизация</a>
+                    <a class="footer-link" href="profile.html">Личный кабинет</a>
+                    <a class="footer-link" href="#search" class="search-link">Поиск</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 BestGames. Все права защищены.</p>
         </div>
     </footer>
 

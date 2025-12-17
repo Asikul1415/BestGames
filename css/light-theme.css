@@ -1,184 +1,142 @@
-/* Когда у HTML есть класс light-theme */
-html.light-theme {
-    /* ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ ДЛЯ СВЕТЛОЙ ТЕМЫ */
+.light-theme {
     --dark: #ffffff;
     --gray: #f5f5f5;
     --light: #333333;
-    --accent: #007bff; /* СИНИЙ вместо золотого */
+    --accent: #007bff;
     --accent-dark: #0056b3;
 
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s !important;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s ;
 }
 
-html.light-theme .body {
-    background-color: var(--dark) !important;
-    color: var(--light) !important;
+.light-theme .body {
+    background-color: var(--dark) ;
+    color: var(--light) ;
 }
 
-/* ШАПКА В СВЕТЛОЙ ТЕМЕ  */
-html.light-theme .header {
-    background: white !important;
-    border-bottom: 3px solid var(--accent) !important;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+.light-theme .header {
+    background: white ;
+    border-bottom: 3px solid var(--accent) ;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1) ;
 }
 
-html.light-theme .logo {
-    color: var(--accent) !important;
+.light-theme .btn-login {
+    border: 1px solid var(--accent) ;
+    color: var(--accent) ;
 }
 
-html.light-theme .nav__link {
-    color: var(--light) !important;
+.light-theme .introduction {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef) ;
 }
 
-html.light-theme .btn-login {
-    border: 1px solid var(--accent) !important;
-    color: var(--accent) !important;
-    background: transparent !important;
+.light-theme .big-header {
+    color: #222 ;
 }
 
-html.light-theme .btn-catalog {
-    background: var(--accent) !important;
-    color: white !important;
+.light-theme .introduction .introduction-slogan {
+    color: #667 ;
 }
 
-/* ВСТУПЛЕНИЕ В СВЕТЛОЙ ТЕМЕ */
-html.light-theme .hero {
-    background: linear-gradient(135deg, #f8f9fa, #e9ecef) !important;
+.light-theme .btn-hero {
+    background: var(--accent) ;
+    color: white ;
 }
 
-html.light-theme .big-header {
-    color: #222 !important;
+.light-theme .slider-section {
+    background: var(--gray) ;
 }
 
-html.light-theme .hero .highlight {
-    color: var(--accent) !important;
-    background: none !important;
+.light-theme .slider {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1) ;
 }
 
-html.light-theme .hero .hero-slogan {
-    color: #667 !important;
+.light-theme .slider-prev,
+.light-theme .slider-next {
+    background: var(--accent) ;
+    color: #333 ;
 }
 
-html.light-theme .btn-hero {
-    background: var(--accent) !important;
-    color: white !important;
+.light-theme .slider-prev:hover,
+.light-theme .slider-next:hover {
+    background-color: var(--accent-dark);
 }
 
-/* СЛАЙДЕР В СВЕТЛОЙ ТЕМЕ  */
-html.light-theme .slider-section {
-    background: var(--gray) !important;
+.light-theme .game-card {
+    background: white ;
+    border: 1px solid #ddd ;
 }
 
-html.light-theme .slider {
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+.light-theme .game-caption {
+    color: #667 ;
 }
 
-html.light-theme .slider-prev,
-html.light-theme .slider-next {
-    background: var(--accent) !important;
-    color: #333 !important;
+.light-theme .price {
+    color: var(--accent);
 }
 
-/* КАРТОЧКИ ИГР В СВЕТЛОЙ ТЕМЕ  */
-html.light-theme .game-card {
-    background: white !important;
-    border: 1px solid #ddd !important;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05) !important;
+.light-theme .price.free {
+    color: #28a745 ;
 }
 
-html.light-theme .game-caption {
-    color: #667 !important;
+.light-theme .rating {
+    color: #ffc107 ; 
 }
 
-html.light-theme .price {
-    color: var(--accent) !important;
+.light-theme .slide-btn {
+    border: 2px solid var(--accent) ;
+    color: var(--accent) ;
 }
 
-html.light-theme .price.free {
-    color: #28a745 !important;
+.light-theme .slide-btn:hover {
+    background-color: var(--accent);
+    color: var(--dark) ;
 }
 
-html.light-theme .rating {
-    color: #ffc107 !important; /* Желтые звезды */
+.light-theme .feature {
+    background: white ;
+    border: 1px solid #eee ;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03) ;
 }
 
-html.light-theme .slide-btn {
-    border: 2px solid var(--accent) !important;
-    color: var(--accent) !important;
-    background: transparent !important;
+.light-theme .feature .feature-title {
+    color: #222 ;
 }
 
-/* ПРЕИМУЩЕСТВА В СВЕТЛОЙ ТЕМЕ */
-html.light-theme .features {
-    background: var(--gray) !important;
+.light-theme .feature-caption {
+    color: #667 ;
 }
 
-html.light-theme .feature {
-    background: white !important;
-    border: 1px solid #eee !important;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.03) !important;
+.light-theme .feature-icon {
+    background: rgba(0, 123, 255, 0.1) ;
+    width: 60px ;
+    height: 60px ;
+    border-radius: 50% ;
+    margin: 0 auto 1rem ;
 }
 
-html.light-theme .feature .feature-title {
-    color: #222 !important;
+.light-theme .footer {
+    background: #343a40 ;
 }
 
-html.light-theme .feature-caption {
-    color: #667 !important;
+.light-theme .footer-link:hover {
+    color: white ;
 }
 
-html.light-theme .feature-icon {
-    color: var(--accent) !important;
-    background: rgba(0, 123, 255, 0.1) !important;
-    width: 60px !important;
-    height: 60px !important;
-    border-radius: 50% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    margin: 0 auto 1rem !important;
+.light-theme .footer-bottom {
+    border-top-color: #495057 ;
+    color: #999 ;
 }
 
-/* ПОДВАЛ В СВЕТЛОЙ ТЕМЕ  */
-html.light-theme .footer {
-    background: #343a40 !important; /* Темно-серый */
-    color: white !important;
+.light-theme .search-input {
+    background: white ;
+    border: 2px solid #ddd ;
+    color: #333 ;
 }
 
-html.light-theme .footer-logo {
-    color: white !important;
+.light-theme .search-btn {
+    background: var(--accent) ;
+    color: white ;
 }
 
-html.light-theme .footer-link {
-    color: #ccc !important;
-}
-
-html.light-theme .footer-link:hover {
-    color: white !important;
-}
-
-html.light-theme .footer-contact__text {
-    color: #aaa !important;
-}
-
-html.light-theme .footer-bottom {
-    border-top-color: #495057 !important;
-    color: #999 !important;
-}
-
-/* ПОИСК В СВЕТЛОЙ ТЕМЕ */
-html.light-theme .search-input {
-    background: white !important;
-    border: 2px solid #ddd !important;
-    color: #333 !important;
-}
-
-html.light-theme .search-btn {
-    background: var(--accent) !important;
-    color: white !important;
-}
-
-/* МЕНЮ-БУРГЕР В СВЕТЛОЙ ТЕМЕ */
-html.light-theme .burger-menu__btn-line {
-    background: #333 !important;
+.light-theme .burger-menu__btn-line {
+    background: #333 ;
 }

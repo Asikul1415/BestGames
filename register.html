@@ -10,146 +10,140 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="./images/logo.svg">
 </head>
-<body class="html-body auth-page">
+<body class="html-body">
     <header class="header">
-        <div class="container">
-            <div class="header__inner">
-                <nav class="nav">
-                    <div class="nav__header">
-                        <a href="index.html"><img class="logo" src="images/logo.svg"></a>
-                        <button class="burger-menu">
-                            <span class="burger-menu__btn-line"></span>
-                            <span class="burger-menu__btn-line"></span>
-                            <span class="burger-menu__btn-line"></span>
-                        </button>
+        <div class="header__inner">
+            <nav class="nav">
+                <div class="nav__header">
+                    <a href="index.html"><img class="logo" src="images/logo.svg"></a>
+                    <button class="burger-menu">
+                        <span class="burger-menu__btn-line"></span>
+                        <span class="burger-menu__btn-line"></span>
+                        <span class="burger-menu__btn-line"></span>
+                    </button>
+                </div>
+                <div class="nav__inner">
+                    <div class="search-section">
+                        <div class="search-box">
+                            <input type="search" placeholder="Быстрый поиск по жанрам..." class="search-input" id="search">
+                            <button class="search-btn">Найти</button>
+                        </div>
+                        <div class="search-suggestions search-suggestions_hidden">
+                            <!-- Here are search-suggestion(s) being loaded by js -->
+                        </div>
                     </div>
-                    <div class="nav__inner">
-                        <div class="search-section">
-                            <div class="search-box">
-                                <input type="search" placeholder="Быстрый поиск по жанрам..." class="search-input" id="search">
-                                <button class="search-btn">Найти</button>
-                            </div>
-                            <div class="search-suggestions search-suggestions_hidden">
-                                <!-- Here are search-suggestion(s) being loaded by js -->
-                            </div>
-                        </div>
-                        <div class="nav__links">
-                            <a href="index.html" class="btn-catalog nav__link">Главная</a>
-                            <a href="catalog.html" class="btn-catalog nav__link">Каталог</a>
-                            <a href="login.html" class="btn-login nav__link">Войти</a>
-                            <a href="profile.html" class="btn-login nav__link">Личный кабинет</a>
-                        </div>
-                    </div>    
-                </nav>               
-            </div>
+                    <div class="nav__links">
+                        <a href="index.html" class="btn-catalog nav__link">Главная</a>
+                        <a href="catalog.html" class="btn-catalog nav__link">Каталог</a>
+                        <a href="login.html" class="btn-login nav__link">Войти</a>
+                        <a href="profile.html" class="btn-login nav__link">Личный кабинет</a>
+                    </div>
+                </div>    
+            </nav>               
         </div>
     </header>
 
     <main class="main">
-        <div class="container">
-            <div class="auth-container">
-                <h1 class="big-header auth-container__header">Регистрация в <span class="highlight">BestGames</span></h1>
-                <p class="subtitle">Создайте аккаунт, чтобы начать покупать игры</p>
+        <div class="auth-container">
+            <h1 class="big-header auth-container__header">Регистрация в <span class="highlight">BestGames</span></h1>
+            <p class="subtitle">Создайте аккаунт, чтобы начать покупать игры</p>
 
-                <form class="auth-form" action="#" method="POST">
-                    <div class="form-row">
-                        <div class="form-group form-group_form-row">
-                            <label for="email">E-mail *</label>
-                            <input class="form-group__input-field" type="email" id="email" name="email" required placeholder="example@mail.ru">
-                        </div>
-                        <div class="form-group form-group_form-row">
-                            <label for="phone">Номер телефона *</label>
-                            <input class="form-group__input-field" type="tel" id="phone" name="phone" required placeholder="+7 (999) 999-99-99">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group form-group_form-row">
-                            <label for="lastname">Фамилия *</label>
-                            <input class="form-group__input-field" type="text" id="lastname" name="lastname" required placeholder="Иванов">
-                        </div>
-                        <div class="form-group form-group_form-row">
-                            <label for="firstname">Имя *</label>
-                            <input class="form-group__input-field" type="text" id="firstname" name="firstname" required placeholder="Иван">
-                        </div>
+            <form class="auth-form" action="#" method="POST">
+                <div class="form-row">
+                    <div class="form-group form-group_form-row">
+                        <label for="email">E-mail *</label>
+                        <input class="form-group__input-field" type="email" id="email" name="email" required placeholder="example@mail.ru">
                     </div>
                     <div class="form-group form-group_form-row">
-                        <label for="birthdate">Дата рождения *</label>
-                        <input class="form-group__input-field" type="date" id="birthdate" name="birthdate" required>
+                        <label for="phone">Номер телефона *</label>
+                        <input class="form-group__input-field" type="tel" id="phone" name="phone" required placeholder="+7 (999) 999-99-99">
                     </div>
-                    <div class="form-row">
-                        <div class="form-group form-group_form-row">
-                            <label for="password">Пароль *</label>
-                            <input class="form-group__input-field" type="password" id="password" name="password" required placeholder="••••••••">
-                        </div>
-                        <div class="form-group form-group_form-row">
-                            <label for="password_confirm">Повтор пароля *</label>
-                            <input class="form-group__input-field" type="password" id="password_confirm" name="password_confirm" required placeholder="••••••••">
-                        </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group form-group_form-row">
+                        <label for="lastname">Фамилия *</label>
+                        <input class="form-group__input-field" type="text" id="lastname" name="lastname" required placeholder="Иванов">
                     </div>
-                    <div class="form-checkbox">
-                        <input class="form-checkbox__input-field" type="checkbox" id="agree" name="agree" required>
-                        <label class="form-checkbox__title" for="agree">Я согласен на обработку персональных данных</label>
+                    <div class="form-group form-group_form-row">
+                        <label for="firstname">Имя *</label>
+                        <input class="form-group__input-field" type="text" id="firstname" name="firstname" required placeholder="Иван">
                     </div>
-                    <button type="submit" class="btn-submit">Зарегистрироваться</button>
-                    <div class="form-links">
-                        <a href="login.html" class="link"> Уже есть аккаунт?</a>
+                </div>
+                <div class="form-group form-group_form-row">
+                    <label for="birthdate">Дата рождения *</label>
+                    <input class="form-group__input-field" type="date" id="birthdate" name="birthdate" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group form-group_form-row">
+                        <label for="password">Пароль *</label>
+                        <input class="form-group__input-field" type="password" id="password" name="password" required placeholder="••••••••">
                     </div>
-                </form>
-            </div>
+                    <div class="form-group form-group_form-row">
+                        <label for="password_confirm">Повтор пароля *</label>
+                        <input class="form-group__input-field" type="password" id="password_confirm" name="password_confirm" required placeholder="••••••••">
+                    </div>
+                </div>
+                <div class="form-checkbox">
+                    <input class="form-checkbox__input-field" type="checkbox" id="agree" name="agree" required>
+                    <label class="form-checkbox__title" for="agree">Я согласен на обработку персональных данных</label>
+                </div>
+                <button type="submit" class="btn-submit">Зарегистрироваться</button>
+                <div class="form-links">
+                    <a href="login.html" class="link"> Уже есть аккаунт?</a>
+                </div>
+            </form>
         </div>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <a href="index.html"><img class="logo" src="images/logo.svg"></a>
-                    <div class="footer-contact">
-                        <p class="footer-contact__text"><i class="fas fa-phone footer-contact__icon"></i> 8-800-999-55-99</p>
-                        <p class="footer-contact__text"><i class="fas fa-envelope footer-contact__icon"></i> best@games.ru</p>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 class="footer-title">Клиентам</h4>
-                    <div class="footer-links">
-                        <a class="footer-link" href="catalog.html">Каталог игр</a>
-                        <a class="footer-link" href="#">Акции</a>
-                        <a class="footer-link" href="#">Бонусная программа</a>
-                        <a class="footer-link" href="#">Помощь</a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 class="footer-title">Партнерам</h4>
-                    <div class="footer-links">
-                        <a class="footer-link" href="#">Сотрудничество</a>
-                        <a class="footer-link" href="#">Размещение рекламы</a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 class="footer-title">О нас</h4>
-                    <div class="footer-links">
-                        <a class="footer-link" href="#">О компании</a>
-                        <a class="footer-link" href="#">Контакты</a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 class="footer-title">Навигация</h4>
-                    <div class="footer-links">
-                        <a class="footer-link" href="index.html">Главная</a>
-                        <a class="footer-link" href="register.html">Регистрация</a>
-                        <a class="footer-link" href="login.html">Авторизация</a>
-                        <a class="footer-link" href="profile.html">Личный кабинет</a>
-                        <a class="footer-link" href="#search" class="search-link">Поиск</a>
-                    </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <a href="index.html"><img class="logo" src="images/logo.svg"></a>
+                <div class="footer-contact">
+                    <p class="footer-contact__text"><i class="fas fa-phone footer-contact__icon"></i> 8-800-999-55-99</p>
+                    <p class="footer-contact__text"><i class="fas fa-envelope footer-contact__icon"></i> best@games.ru</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>© 2025 BestGames. Все права защищены.</p>
+            
+            <div class="footer-section">
+                <h4 class="footer-title">Клиентам</h4>
+                <div class="footer-links">
+                    <a class="footer-link" href="catalog.html">Каталог игр</a>
+                    <a class="footer-link" href="#">Акции</a>
+                    <a class="footer-link" href="#">Бонусная программа</a>
+                    <a class="footer-link" href="#">Помощь</a>
+                </div>
             </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-title">Партнерам</h4>
+                <div class="footer-links">
+                    <a class="footer-link" href="#">Сотрудничество</a>
+                    <a class="footer-link" href="#">Размещение рекламы</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-title">О нас</h4>
+                <div class="footer-links">
+                    <a class="footer-link" href="#">О компании</a>
+                    <a class="footer-link" href="#">Контакты</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4 class="footer-title">Навигация</h4>
+                <div class="footer-links">
+                    <a class="footer-link" href="index.html">Главная</a>
+                    <a class="footer-link" href="register.html">Регистрация</a>
+                    <a class="footer-link" href="login.html">Авторизация</a>
+                    <a class="footer-link" href="profile.html">Личный кабинет</a>
+                    <a class="footer-link" href="#search" class="search-link">Поиск</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 BestGames. Все права защищены.</p>
         </div>
     </footer>
 
